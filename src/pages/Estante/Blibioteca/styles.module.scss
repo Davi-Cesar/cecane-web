@@ -1,0 +1,59 @@
+.Container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .search {
+    background: rgb(228, 228, 228);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    padding: 1rem;
+    height: 40px;
+    width: 255px;
+    border-radius: 40px;
+    margin: 2rem;
+
+    a {
+      color: green;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      float: right;
+      display: flex;
+    }
+
+    input {
+      border: none;
+      background: none;
+      outline: none;
+      float: left;
+      padding: 0;
+      color: var(--gray-750);
+      font-size: 16px;
+      transition: 0.4s;
+      line-height: 40px;
+    }
+  }
+
+  h2 {
+    margin-top: 1rem;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .Content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}

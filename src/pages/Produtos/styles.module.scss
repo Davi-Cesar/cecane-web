@@ -1,0 +1,30 @@
+.Container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    h2 {
+        margin-top: 1rem;
+        font-weight: 700;
+    }
+
+    h4 {
+        font-weight: 700;
+        padding: 1rem 0;
+    }
+    
+    p {
+        font-size: 1.3rem;
+        font-weight: 100;
+        text-align: justify;
+    }
+    
+    .Content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+        
+    
+}

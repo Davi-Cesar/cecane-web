@@ -1,0 +1,50 @@
+.Productions {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1rem;
+
+  img {
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .ProductionsFooter {
+    padding: 1rem;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    text-align: left;
+
+    button {
+      background: var(--white);
+      border: none;
+      color: var(--green-600);
+      padding: 0.8rem;
+      font-family: "Roboto", sans-serif;
+      display: inline-block;
+
+      text-decoration: none;
+      text-align: center;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+
+      cursor: pointer;
+      border: 1px solid var(--green-600);
+      border-radius: 0.4rem;
+      transition: 0.5s;
+      height: 50px;
+      width: 50%;
+
+      &:hover {
+        background-color: var(--green-600);
+        color: var(--white);
+      }
+    }
+  }
+}

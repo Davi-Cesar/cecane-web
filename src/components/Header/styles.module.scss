@@ -1,0 +1,243 @@
+.headerContainer {
+  height: 11rem;
+  border-bottom: 1px solid var(--gray-300);
+  background: var(--gray-100);
+  h3 {
+    font: 400 1rem "Roboto", sans-serif;
+  }
+}
+
+.logoContainer {
+  position: relative;
+  margin-top: 0.5rem;
+  max-width: 700px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  h3 {
+    font-size: 1.5rem;
+    align-items: center;
+    margin: auto;
+    margin-left: 1rem;
+    color: var(--green-600);
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+.headerContent {
+  max-width: 1120px;
+  height: 11rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font: 400 1rem "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  nav {
+    height: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    a {
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-block;
+
+      padding: 0 0.35rem;
+      height: 1.6rem;
+      line-height: 1rem; /* colocando line height mesmo tamanho que ele ocupa, fixa no centro */
+      color: var(--gray-750);
+      position: relative;
+      transition: color 0.2s;
+
+      svg {
+        display: inline-block;
+        fill: var(--gray-750);
+        margin-left: 5px;
+      }
+      img {
+        color: var(--green-600);
+      }
+
+      & + a {
+        margin-left: 0.5rem;
+      }
+
+      &:hover {
+        color: var(--green-600);
+
+        svg {
+          display: inline-block;
+          fill: var(--gray-750);
+          margin-left: 5px;
+          fill: var(--green-600);
+        }
+      }
+
+      &.active::after {
+        content: "";
+        text-decoration: none;
+        height: 3px;
+        border-radius: 3px 3px 0 0;
+        width: 100%;
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        background: var(--green-600);
+      }
+
+      &.active {
+        color: var(--green-600);
+      }
+
+      a {
+        padding: 0;
+        background: var(--green-600);
+        color: white;
+        position: absolute;
+        align-items: left;
+
+        &:hover {
+          background: filter(brightness(3));
+        }
+      }
+      ul {
+        padding: 0;
+        position: absolute;
+        background-color: var(--green-600);
+
+        z-index: 10;
+        display: none;
+      }
+
+      &:hover > ul {
+        display: block;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      ul li {
+        width: 150px;
+        margin: 0 auto;
+        padding: 1rem;
+        justify-content: left;
+
+        color: var(--white);
+        list-style: none;
+        text-decoration: none;
+
+        &:hover {
+          transition: 1s;
+          background: var(--green-700);
+        }
+      }
+    }
+
+    .btnMobile {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .headerContent {
+    nav {
+      a {
+        height: 1.3rem;
+        & + a {
+          margin-left: 0.05rem;
+        }
+
+        &.active::after {
+          border-radius: 2px 2px 0 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .headerContainer {
+    h3 {
+      font-size: 1.1rem;
+    }
+    nav {
+      a {
+        display: none;
+      }
+    }
+
+    .navContainer {
+      .btnMobile {
+        display: block;
+        top: 5.9rem;
+        right: 0;
+        align-items: center;
+        position: absolute;
+        height: 3rem;
+        border: none;
+        background-color: darkgreen;
+      }
+
+      .mobileMenu {
+        cursor: pointer;
+        position: absolute;
+
+        right: 0;
+        top: 20%;
+
+        .line1 {
+          width: 27px;
+          height: 2px;
+          background-color: var(--green-600);
+          margin: 5px;
+        }
+        .line2 {
+          width: 27px;
+          height: 2px;
+          background-color: var(--green-600);
+          margin: 5px;
+        }
+        .line3 {
+          width: 27px;
+          height: 2px;
+          background-color: var(--green-600);
+          margin: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .headerContainer {
+    width: 100vw;
+    height: 9rem;
+
+    .navContainer {
+      .mobileMenu {
+        top: 14%;
+      }
+    }
+
+    .headerContent {
+      width: 100%;
+      .logoContainer {
+        width: 100vw;
+        margin: 0;
+        .titleContent {
+          font-size: 1rem;
+          align-items: center;
+        }
+        img {
+          width: 60%;
+          height: 60%;
+        }
+      }
+    }
+  }
+}

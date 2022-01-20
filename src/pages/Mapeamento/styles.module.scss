@@ -1,0 +1,56 @@
+.Container {
+  max-width: 800px;
+
+  margin: 0 auto;
+
+  padding: 0 2rem;
+
+  h2 {
+    margin: 1rem 0rem;
+  }
+
+  .Content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    .Map {
+      display: flex;
+      background-color: rgb(167, 167, 167);
+      width: 100%;
+    }
+    h4 {
+      margin-bottom: 2rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      width: 100%;
+      font-size: 1.1rem;
+      text-align: justify;
+
+      a {
+        color: var(--green-600);
+
+        font-weight: 600;
+        transition: filter 0.4s;
+        &:hover {
+          filter: grayscale(0.9);
+        }
+      }
+    }
+  }
+}
+@media (max-width: 720px) {
+  .Container {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: aqua;
+    .Content {
+      width: 100%;
+      position: relative;
+      background-color: blueviolet;
+    }
+  }
+}

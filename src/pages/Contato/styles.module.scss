@@ -1,0 +1,253 @@
+.Container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .Content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: left;
+    width: 100%;
+
+    h6,
+    h5 {
+      margin-bottom: 1rem;
+    }
+    p {
+      font-weight: 400;
+      padding-left: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .instagram {
+      margin-bottom: 5rem;
+      padding: 0;
+
+      .efeito {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        transition: width 2s;
+        border-radius: 5rem;
+        transition: background-color 1s;
+        width: 13rem;
+
+        cursor: pointer;
+        &:hover {
+          background-color: #00a036;
+          p {
+            color: var(--white);
+            text-decoration: underline;
+          }
+        }
+        p {
+          margin-top: 0.5rem;
+          padding: 0.8rem;
+          text-decoration: none;
+          font-weight: 600;
+          transition: color 1s;
+        }
+
+        img {
+          height: 70px;
+          width: 70px;
+          margin: 0;
+          padding: 0;
+          cursor: pointer;
+        }
+      }
+    }
+    .buttonAlign {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        text-decoration: none;
+        text-align: center;
+        font-size: 1rem;
+        border-radius: 0.9rem;
+        border: none;
+        width: 20rem;
+        height: 5rem;
+        color: var(--white);
+        background-color: #00a036;
+
+        display: relative;
+
+        transition: filter 0.2s;
+
+        img {
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto;
+          padding-left: 0.5rem;
+          vertical-align: top;
+        }
+
+        &:hover {
+          filter: brightness(0.9);
+        }
+      }
+    }
+  }
+}
+
+.headModal {
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  h2 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    justify-content: center;
+  }
+  img {
+    height: 60px;
+    width: 60px;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.containerModal {
+  input {
+    width: 100%;
+    padding: 0 1.5rem;
+    height: 4rem;
+    border-radius: 0.25rem;
+
+    border: 1px solid #d7d7d7;
+    background: #e7e9ee;
+
+    font-weight: 400;
+    font-size: 1rem;
+
+    &::placeholder {
+      color: #adadad;
+    }
+    & + input {
+      margin-top: 1rem;
+    }
+  }
+
+  select {
+    &:invalid {
+      color: #adadad;
+    }
+    width: 100%;
+    padding: 0 1.5rem;
+    height: 4rem;
+    border-radius: 0.25rem;
+
+    border: 1px solid #d7d7d7;
+    background: #e7e9ee;
+
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 1rem;
+
+    &::placeholder {
+      color: #222222;
+    }
+    option {
+      background: #e7e9ee;
+      padding: 0 1.5rem;
+      position: relative;
+
+      padding: 10px 15px;
+
+      font-size: 1rem;
+    }
+    // option[disabled] {
+    //   display: none;
+    // }
+  }
+
+  textarea {
+    width: 100%;
+
+    padding: 0 1.5rem;
+    height: 7rem;
+    border-radius: 0.25rem;
+
+    border: 1px solid #d7d7d7;
+    background: #e7e9ee;
+
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 1rem;
+
+    &::placeholder {
+      color: #adadad;
+    }
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    padding: 0 1.5rem;
+    height: 4rem;
+    background-color: #00a036;
+    border: none;
+    color: var(--white);
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    text-align: center;
+
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+}
+
+.reactModalContent {
+  width: 100%;
+  max-width: 576px;
+
+  background: rgba(255, 255, 255, 0.952);
+  padding: 3rem;
+  position: relative;
+  border-radius: 0.24rem;
+}
+
+.reactModaOverlay {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonClose {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  border: 0;
+  background: transparent;
+  transition: filter 0.2s;
+  &:hover {
+    filter: brightness(0.8);
+  }
+}

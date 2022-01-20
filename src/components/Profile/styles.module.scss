@@ -1,0 +1,94 @@
+.Profile {
+  margin: 0 0.5rem;
+  background: rgba(238, 238, 238, 0.849);
+  width: 350px;
+  height: 500px;
+  max-height: 500px;
+  border-radius: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: contain;
+  }
+
+  h4 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    margin: 0;
+    padding: 0.5rem;
+  }
+
+  .Title {
+    color: var(--green-600);
+    font-style: italic;
+    font-size: 1rem;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .Description {
+    font-size: 00.85rem;
+    text-align: justify;
+
+    /* superior | direita | inferior | esquerda */
+    padding: 1rem 1rem;
+  }
+
+  .ProfileFooter {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+    button {
+      width: 100%;
+      height: 55px;
+      padding: auto;
+      margin: 0;
+      border-radius: 0 0 40px 40px;
+      background-color: var(--green-600);
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border: 0;
+      bottom: 1;
+
+      cursor: auto;
+
+      a {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 25px;
+          height: 25px;
+          border-radius: 0;
+          padding: 0;
+          cursor: pointer;
+          margin: 0 auto;
+          object-fit: contain;
+
+          &:hover {
+            transform: scale(1.2);
+
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+}
