@@ -44,7 +44,7 @@ export default function Galeria() {
         <h2>Galeria</h2>
         <div className={styles.Content}>
           {gallery.map((g) => (
-            <Gallery img={g.img} key={g.title} title={g.title} />
+            <Gallery img={g.img} key={g.img} title={g.title} />
           ))}
         </div>
       </div>

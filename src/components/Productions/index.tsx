@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/link-passhref */
-import Link from "next/link";
 import styles from "./styles.module.scss";
 
 interface ProductionsPros {
@@ -21,9 +20,9 @@ export function Productions({
       <div className={styles.ProductionsFooter}>
         <h5>{title}</h5>
         <p>{description}</p>
-        <Link href={link}>
+        <a href={link} target="_blank" rel="noopener noreferrer">
           <button>Dowload</button>
-        </Link>
+        </a>
       </div>
     </div>
   );

@@ -54,28 +54,41 @@ export default function Mapeamento() {
           </div>
           <p>
             Tenha acesso ao{" "}
-            <a type="link" href="">
+            <a
+              type="link"
+              href="http://177.20.148.101/views/map"
+              target="_blank"
+              rel="noreferrer"
+            >
               Mapa Colaborativo
             </a>
             ,
           </p>
           <p>
             Para ter acesso a partir da rede da UFRN,{" "}
-            <a type="link" href="">
+            <a
+              type="link"
+              href="http://10.3.224.88/views/map"
+              target="_blank"
+              rel="noreferrer"
+            >
               Mapa Colaborativo
             </a>
             .
           </p>
-          <h4>Video Explicativo</h4>
-          <iframe
-            src="https://player.vimeo.com/video/542736398?h=e2163e8723&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-            width="720"
-            height="720"
-            frameBorder="0"
-            allow="autoplay; picture-in-picture" // fullscreen;
-            allowFullScreen
-            title="mapa_colaborativo_cecane_v3"
-          ></iframe>
+          <div className={styles.Video}>
+            <h4>Video Explicativo</h4>
+
+            <iframe
+              src="https://player.vimeo.com/video/542736398?h=e2163e8723&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              width="720"
+              height="720"
+              frameBorder="0"
+              allow="autoplay; picture-in-picture" // fullscreen;
+              allowFullScreen
+              title="mapa_colaborativo_cecane_v3"
+            ></iframe>
+          </div>
         </div>
       </div>
     </>

@@ -12,6 +12,7 @@
     margin-bottom: 2rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--gray-300);
+
     &:last-child {
       border-bottom: 0;
     }
@@ -30,20 +31,19 @@
         color: var(--gray-300);
       }
     }
-    .containerText {
-      text-align: justify;
-      span {
-        color: var(--green-600);
-        font-weight: 600;
+    text-align: justify;
+    span {
+      color: var(--green-600);
+      font-weight: 600;
 
-        a {
-          text-decoration: underline;
-        }
+      a {
+        text-decoration: underline;
+        word-break: break-all;
       }
+    }
 
-      span:hover {
-        color: var(--gray-300);
-      }
+    span:hover {
+      color: var(--gray-300);
     }
   }
 }

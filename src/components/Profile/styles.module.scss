@@ -4,20 +4,24 @@
   width: 350px;
   height: 500px;
   max-height: 500px;
-  border-radius: 40px;
+  border-radius: 10px;
   overflow: hidden;
   display: flex;
   align-items: center;
   text-align: center;
   flex-direction: column;
   margin-top: 1rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: box-shadow 1s;
+  &:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 
   img {
+    margin-top: 10px;
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   h4 {
@@ -56,15 +60,13 @@
       height: 55px;
       padding: auto;
       margin: 0;
-      border-radius: 0 0 40px 40px;
       background-color: var(--green-600);
       justify-content: center;
       align-items: center;
       text-align: center;
       border: 0;
       bottom: 1;
-
-      cursor: auto;
+      cursor: pointer;
 
       a {
         margin: 0;
@@ -78,15 +80,15 @@
           height: 25px;
           border-radius: 0;
           padding: 0;
-          cursor: pointer;
           margin: 0 auto;
           object-fit: contain;
+        }
+      }
+      &:hover {
+        img {
+          transform: scale(1.2);
 
-          &:hover {
-            transform: scale(1.2);
-
-            transition: 0.5s;
-          }
+          transition: 0.5s;
         }
       }
     }

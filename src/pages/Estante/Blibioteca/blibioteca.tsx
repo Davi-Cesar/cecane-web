@@ -13,67 +13,67 @@ const shelfs = [
     img: "/images/Estante/Livro_02.png",
     title:
       "Cartilha de orientações para garantia da Alimentação Escolar em tempos de COVID-19",
-    link: "",
+    link: "https://drive.google.com/file/d/1QoqtDc5M0ZQSQ6FXfyK6txfL0gz78EA7/view?usp=sharing",
   },
   {
     img: "/images/Estante/Livro_03.png",
     title: "Caderno de Legislação 2021",
-    link: "",
+    link: "https://drive.google.com/file/d/1SAs9qlMg2-vDT6dgW8ZR9TF4vEMFJ4nP/view?usp=sharing",
   },
   {
     img: "/images/Estante/Livro_04.png",
     title: "Orientações para Eleição dos conselheiros do CAE",
-    link: "",
+    link: "https://drive.google.com/file/d/1bpSiy4fbikvMmTHzibdbQSmKJAhM8ifK/view?usp=sharing",
   },
   {
     img: "/images/Estante/Livro_05.png",
     title: "Política Nacional de Alimentação e Nutrição",
-    link: "",
+    link: "http://bvsms.saude.gov.br/bvs/publicacoes/politica_nacional_alimentacao_nutricao.pdf",
   },
   {
     img: "/images/Estante/Livro_06.png",
     title: "Guia Alimentar para Crianças Brasileiras menores de 2 anos",
-    link: "",
+    link: "https://drive.google.com/file/d/1Cg0eXLwLL8xmLk6QONLh1X05OJZqA0rF/view?usp=sharing",
   },
   {
     img: "/images/Estante/Livro_07.png",
     title:
       "Marco de Referência de Educação Alimentar e Nutricional para as Políticas Públicas",
-    link: "",
+    link: "https://drive.google.com/file/d/1G61gGG57iYoavACepifcaInWebxwqFBG/view?usp=sharing",
   },
   {
     img: "/images/Estante/Livro_08.png",
     title: "Alimentação escolar indígena e de comunidades tradicionais",
-    link: "",
+    link: "https://drive.google.com/file/d/1j5f18KgI9F9NnZUMTRHglp2rVtHP8E6z/view?usp=sharing",
   },
   {
     img: "/images/Estante/Livro_09.png",
     title:
       "Cartilha de Orientação ao Agricultor Familiar (prevenção no meio rural ao novo coronavírus)",
-    link: "",
+    link: "https://drive.google.com/file/d/1UGXHq96WT1IeNE8g0lytG7XSKiqs1-tu/view?usp=sharing",
   },
   {
     img: "/images/Estante/Livro_10.png",
     title:
       "Cartilha de Recomendações para a execução do PNAE no retorno presencial às aulas",
-    link: "",
+    link: "https://drive.google.com/file/d/1LrfXBV5K0LLTBPRJ1aRcC5m4RpbnKOZJ/view?usp=sharing",
   },
   {
     img: "/images/Estante/Livro_11.png",
     title:
       "Guia educativo para alimentação saudável para pessoas com deficiência visual",
-    link: "",
+    link: "https://drive.google.com/file/d/1X51Mo5PrBzWECCWmdJPFEcQB4mUlyXVe/view?usp=sharing",
   },
   {
     img: "/images/Estante/Livro_12.png",
     title:
       "Orientações para execução do PANE durante a pandemia de coronavírus (COVID-19)",
-    link: "",
+    link: "https://drive.google.com/file/d/1Hna28a5nGaQycWCCyXH3G7RnFec6rVvy/view?usp=sharing",
   },
   {
     img: "/images/Estante/Livro_13.png",
     title: "Cartilha para conselheiros do PNAE 2017",
-    link: "",
+    link: "https://drive.google.com/file/d/1I74HZz_JQVhOe46x6MMbR8SWOZhOxLVg/view?usp=sharing",
   },
 ];
 

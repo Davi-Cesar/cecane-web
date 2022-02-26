@@ -1,12 +1,19 @@
 /* eslint-disable @next/next/link-passhref */
 /* eslint-disable react/no-string-refs */
 /* eslint-disable @next/next/no-html-link-for-pages */
+import { useRouter } from "next/router";
 import Link from "next/link";
 import React, { useState } from "react";
 import styles from "./styles.module.scss";
+import { ActiveLink } from "../ActiveLink";
 
 export function Header() {
-  const [active, setActive] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
+  const { asPath } = useRouter();
+  function toggleOpenMenu() {
+    setOpenMenu(!openMenu);
+  }
+
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
@@ -18,17 +25,37 @@ export function Header() {
           </h3>
         </div>
 
-        <nav>
-          <div className={styles.mobileMenu}>
-            <div className={styles.line1}></div>
-            <div className={styles.line2}></div>
-            <div className={styles.line3}></div>
-          </div>
-          <a href="/" className={styles.active}>
-            Home
-          </a>
-          <a href="/Noticias/noticias">Notícias</a>
-          <a href="#">
+        <div
+          onClick={() => toggleOpenMenu()}
+          className={
+            openMenu === false ? styles.mobileMenuOpen : styles.mobileMenu
+          }
+        >
+          <div className={styles.line1}></div>
+          <div className={styles.line2}></div>
+          <div className={styles.line3}></div>
+        </div>
+        <nav
+          className={
+            openMenu === false ? styles.navContainer : styles.navContainerClose
+          }
+        >
+          <ActiveLink activeClassName={styles.active} href="/">
+            <a>Início</a>
+          </ActiveLink>
+          <ActiveLink activeClassName={styles.active} href="/Noticias/noticias">
+            <a>Notícias</a>
+          </ActiveLink>
+
+          <a
+            className={
+              asPath === "/Informes/InformaNutri/informaNutri" ||
+              asPath === "/Informes/InformeRecursosPnae/informeRecursosPnae" ||
+              asPath === "/Informes/InformeCae/informeCae"
+                ? styles.active
+                : ""
+            }
+          >
             Infomes
             <svg
               width="10"
@@ -51,7 +78,15 @@ export function Header() {
               </Link>
             </ul>
           </a>
-          <a href="#">
+
+          <a
+            className={
+              asPath === "/Cecane/Equipe/equipe" ||
+              asPath === "/Cecane/SobreCecane/sobreCecane"
+                ? styles.active
+                : ""
+            }
+          >
             Cecane
             <svg
               width="10"
@@ -71,8 +106,17 @@ export function Header() {
               </Link>
             </ul>
           </a>
-          <a href="/Produtos/produtos">Produtos</a>
-          <a href="#">
+          <ActiveLink activeClassName={styles.active} href="/Produtos/produtos">
+            <a>Produtos</a>
+          </ActiveLink>
+          <a
+            className={
+              asPath === "/Estante/Blibioteca/blibioteca" ||
+              asPath === "/Estante/Publicacoes/publicacoes"
+                ? styles.active
+                : ""
+            }
+          >
             Estante
             <svg
               width="10"
@@ -92,9 +136,18 @@ export function Header() {
               </Link>
             </ul>
           </a>
-          <a href="/Galeria/galeria">Galeria</a>
-          <a href="/Mapeamento/mapeamento">Mapeamento</a>
-          <a href="/Contato/contato">Contato</a>
+          <ActiveLink activeClassName={styles.active} href="/Galeria/galeria">
+            <a>Galeria</a>
+          </ActiveLink>
+          <ActiveLink
+            activeClassName={styles.active}
+            href="/Mapeamento/mapeamento"
+          >
+            <a>Mapeamento</a>
+          </ActiveLink>
+          <ActiveLink activeClassName={styles.active} href="/Contato/contato">
+            <a>Contato</a>
+          </ActiveLink>
         </nav>
       </div>
     </header>

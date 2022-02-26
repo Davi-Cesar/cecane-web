@@ -20,6 +20,13 @@
     justify-content: space-between;
 
     text-align: left;
+    p {
+      font-size: 0.1rem;
+      text-align: justify;
+    }
+    // h5 {
+    //   font-size: 1.1rem;
+    // }
 
     button {
       background: var(--white);
@@ -44,6 +51,30 @@
       &:hover {
         background-color: var(--green-600);
         color: var(--white);
+      }
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .Productions {
+    img {
+      width: 250px;
+      height: 250px;
+    }
+    .ProductionsFooter {
+      padding: 0rem 0rem 0rem 1rem;
+      margin: 0;
+      p {
+        font-size: 0.5rem;
+        text-align: left;
+      }
+      button {
+        width: 60%;
+        position: relative;
+      }
+      h5 {
+        font-size: 1.1rem;
       }
     }
   }

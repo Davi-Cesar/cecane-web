@@ -1,0 +1,25 @@
+{
+    "locations": [
+      {
+        "key": 1,      
+        "name": "Cooperativa de Desenvolvimento Rural de Guamaré/RN - COODERG",
+        "latitude": "-5.583616",
+        "longitude": "-36.913954"
+      },
+      
+      {
+        "key": 2,      
+        "name": "Janio Celcio Dantas de Oliveira",
+        "latitude": "-5.517599",
+        "longitude": "-35.25854"
+      },
+
+      {
+        "key": 3,      
+        "name": "Adriana Marques da Silva",
+        "latitude": "-5.701408",
+        "longitude": "36.246219"
+      }
+      
+    ]
+  }

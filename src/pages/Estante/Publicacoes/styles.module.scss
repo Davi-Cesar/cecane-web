@@ -2,16 +2,25 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 0 2rem;
-
+  //background-color: rgb(4, 102, 102);
   h2 {
     margin-top: 1rem;
   }
   .Content {
     display: flex;
     flex-direction: column;
-
+    //background-color: antiquewhite;
+    width: 100%;
     p {
       font-size: 18px;
     }
+  }
+}
+@media (max-width: 740px) {
+  .Container {
+    padding: 0;
+
+    margin: 0;
+    width: 100%;
   }
 }

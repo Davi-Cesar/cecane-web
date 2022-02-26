@@ -1,28 +1,23 @@
 .carouselContainer {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    img {
-        border-radius: .5rem;
-        height: 450px;
-        width: 735px;
-        margin: 0 auto;
-        
-    }
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  img {
+    border-radius: 0.5rem;
+    height: 450px;
+    width: 735px;
+    margin: 0 auto;
+  }
 }
 
 .Carousel {
-    border-radius: 5rem;
+  border-radius: 5rem;
 }
 
-
-@media (max-width: 720px) { 
-    
-
-    .carouselContainer {
-        
-        img {
-            object-fit: contain;
-            
-        }
+@media (max-width: 720px) {
+  .carouselContainer {
+    img {
+      object-fit: contain;
+      height: 300px;
     }
+  }
 }

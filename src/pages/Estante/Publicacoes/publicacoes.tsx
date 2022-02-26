@@ -44,7 +44,7 @@ export default function Publicacoes() {
           {productions.map((p) => (
             <Productions
               img={p.img}
-              key={p.title}
+              key={p.img}
               title={p.title}
               description={p.description}
               link={p.link}

@@ -6,7 +6,6 @@ import React, { useRef } from "react";
 import { FormEvent, useState } from "react";
 
 import styles from "./styles.module.scss";
-
 interface EmailProps {
   name: string;
   yourEmail: string;
@@ -32,17 +31,11 @@ export default function Contato() {
 
   const sendEmail = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    console.log(form.current);
-    console.log({
-      name,
-      yourEmail,
-      message,
-      email,
-    });
+
     emailjs
       .sendForm(
-        "service_1sgo6ek",
-        "template_yy8nhj8",
+        "service_lz982cp",
+        "template_m52vk8n",
         form.current,
         "user_0lWXyf5ra38buj6nQi7Kk"
       )
@@ -56,33 +49,25 @@ export default function Contato() {
       );
   };
 
-  // function handleSubmitEmail(event: FormEvent, _e: EmailProps) {
-  //   event.preventDefault();
+  const sendEmailAssessoria = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
 
-  //   console.log({
-  //     name,
-  //     yourEmail,
-  //     message,
-  //     email,
-  //   });
-  //   emailjs
-  //     .sendForm(
-  //       "service_1sgo6ek",
-  //       "template_mnndgzn",
-  //       form.current,
-  //       "user_0lWXyf5ra38buj6nQi7Kk"
-  //     )
-  //     .then(
-  //       (_result) => {
-  //         alert("Mensagem Enviada");
-  //         console.log("deu bom");
-  //       },
-  //       (_error) => {
-  //         alert("Mensagem Enviada");
-  //         console.log("deu ruim");
-  //       }
-  //     );
-  // }
+    emailjs
+      .sendForm(
+        "service_xqzy85q",
+        "template_wkxddxd",
+        form.current,
+        "user_0lWXyf5ra38buj6nQi7Kk"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   return (
     <>
@@ -138,7 +123,11 @@ export default function Contato() {
             <form
               ref={form}
               className={styles.containerModal}
-              onSubmit={sendEmail}
+              onSubmit={
+                email === "cecaneufrn@gmail.com"
+                  ? sendEmail
+                  : sendEmailAssessoria
+              }
             >
               <input
                 name="name"
@@ -178,9 +167,6 @@ export default function Contato() {
                 </option>
                 <option value="assessoriacecaneufrn@gmail.com<">
                   assessoriacecaneufrn@gmail.com
-                </option>
-                <option value="davicesar2515@gmail.com">
-                  davicesar2515@gmail.com
                 </option>
               </select>
               <button type="submit">Enviar E-mail</button>
