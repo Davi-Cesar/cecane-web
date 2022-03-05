@@ -1,6 +1,3 @@
-/* eslint-disable @next/next/link-passhref */
-/* eslint-disable react/no-string-refs */
-/* eslint-disable @next/next/no-html-link-for-pages */
 import { useRouter } from "next/router";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -8,7 +5,7 @@ import styles from "./styles.module.scss";
 import { ActiveLink } from "../ActiveLink";
 
 export function Header() {
-  const [openMenu, setOpenMenu] = useState(false);
+  const [openMenu, setOpenMenu] = useState(true);
   const { asPath } = useRouter();
   function toggleOpenMenu() {
     setOpenMenu(!openMenu);
@@ -28,7 +25,7 @@ export function Header() {
         <div
           onClick={() => toggleOpenMenu()}
           className={
-            openMenu === false ? styles.mobileMenuOpen : styles.mobileMenu
+            openMenu === true ? styles.mobileMenuOpen : styles.mobileMenu
           }
         >
           <div className={styles.line1}></div>
@@ -37,7 +34,7 @@ export function Header() {
         </div>
         <nav
           className={
-            openMenu === false ? styles.navContainer : styles.navContainerClose
+            openMenu === false ? styles.navContainerClose : styles.navContainer
           }
         >
           <ActiveLink activeClassName={styles.active} href="/">
@@ -67,13 +64,16 @@ export function Header() {
               <path d="M1.41 0L6 4.58L10.59 0L12 1.41L6 7.41L0 1.41L1.41 0Z" />
             </svg>
             <ul>
-              <Link href="/Informes/InformaNutri/informaNutri">
+              <Link href="/Informes/InformaNutri/informaNutri" passHref>
                 <li>InformaNutri</li>
               </Link>
-              <Link href="/Informes/InformeRecursosPnae/informeRecursosPnae">
+              <Link
+                href="/Informes/InformeRecursosPnae/informeRecursosPnae"
+                passHref
+              >
                 <li>Informe Recursos PNAE</li>
               </Link>
-              <Link href="/Informes/InformeCae/informeCae">
+              <Link href="/Informes/InformeCae/informeCae" passHref>
                 <li>Informe CAE</li>
               </Link>
             </ul>
@@ -98,10 +98,10 @@ export function Header() {
               <path d="M1.41 0L6 4.58L10.59 0L12 1.41L6 7.41L0 1.41L1.41 0Z" />
             </svg>
             <ul>
-              <Link href="/Cecane/Equipe/equipe">
+              <Link href="/Cecane/Equipe/equipe" passHref>
                 <li>Equipe</li>
               </Link>
-              <Link href="/Cecane/SobreCecane/sobreCecane">
+              <Link href="/Cecane/SobreCecane/sobreCecane" passHref>
                 <li>Sobre o Cecane</li>
               </Link>
             </ul>
@@ -128,10 +128,10 @@ export function Header() {
               <path d="M1.41 0L6 4.58L10.59 0L12 1.41L6 7.41L0 1.41L1.41 0Z" />
             </svg>
             <ul>
-              <Link href="/Estante/Blibioteca/blibioteca">
+              <Link href="/Estante/Blibioteca/blibioteca" passHref>
                 <li>Blibioteca</li>
               </Link>
-              <Link href="/Estante/Publicacoes/publicacoes">
+              <Link href="/Estante/Publicacoes/publicacoes" passHref>
                 <li>Publicacôes/ produções</li>
               </Link>
             </ul>

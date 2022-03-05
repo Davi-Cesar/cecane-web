@@ -2,78 +2,8 @@ import Head from "next/head";
 import React from "react";
 import { Informes } from "../../../components/Informes";
 import styles from "../styles.module.scss";
-export const informesRecursos = [
-  {
-    title: "Informe Recursos PNAE 001",
-    description:
-      "A edição nº 001 do Informe Recursos PNAE, um instrumento por meio do qual o Fundo Nacional de Desenvolvimento da Educação (FNDE) informará tudo sobre o repasse dos recursos financeiros federais do Programa Nacional de Alimentação Escolar (PNAE).",
-    date: "24 de fevereiro de 2022",
-    link: "https://drive.google.com/file/d/17W0WiGuo50ejdXU0UTWkJ9KZhF3EAWVL/view?usp=sharing",
-  },
-  {
-    title: "Informe Recursos PNAE 013",
-    description:
-      "A edição nº 13 do Informe Recursos PNAE, um instrumento pelo qual o Fundo Nacional de Desenvolvimento da Educação (FNDE), por meio da equipe da Coordenação-Geral do Programa Nacional de Alimentação Escolar (CGPAE), informará tudo sobre o repasse dos recursos financeiros federais do Programa Nacional de Alimentação Escolar(PNAE).",
-    date: "06 de agosto de 2021",
-    link: "https://drive.google.com/file/d/11kxqQ33suP-25Qt7LhU7tLgKHQ1_ZiMR/view?usp=sharing",
-  },
-  {
-    title: "Informe Recursos PNAE 012",
-    description:
-      "Fundo Nacional de Desenvolvimento da Educação (FNDE), por meio da equipe da Coordenação-Geral do Programa Nacional de Alimentação Escolar (CGPAE), informará tudo sobre o repasse dos recursos financeiros federais do Programa Nacional de Alimentação Escolar(PNAE). ",
-    date: "06 de agosto de 2021",
-    link: "https://drive.google.com/file/d/1YEfuf9-FpZQmB6ZeVJWYz6SG5LBqlSil/view?usp=sharing",
-  },
-  {
-    title: "Informe Recursos PNAE 011",
-    description:
-      "A edição nº 11 do Informe Recursos PNAE, um instrumento pelo qual o Fundo Nacional de Desenvolvimento da Educação (FNDE), por meio da equipe da Coordenação-Geral do Programa Nacional de Alimentação Escolar (CGPAE), informará tudo sobre o repasse dos recursos financeiros federais do Programa Nacional de Alimentação Escolar(PNAE).",
-    date: "06 de agosto de 2021",
-    link: "https://drive.google.com/file/d/1HTok_7PPjgSsb7q3xc-SlLpZ2dUoERDb/view?usp=sharing",
-  },
-  {
-    title: "Informe Recursos PNAE 007",
-    description:
-      "A edição nº 7 do Informe Recursos PNAE, Informe trará informações sobre o saldo existente nas contas correntes específicas do Programa.",
-    date: "02 de junho de 2021",
-    link: "https://drive.google.com/file/d/16d8cCXuhEl4KA1rRns_9FZtaibvEuNPY/view?usp=sharing",
-  },
-  {
-    title: "Informe Recursos PNAE 006",
-    description:
-      "A edição nº 6 do Informe Recursos PNAE, informe tratará de orientações sobre o processo de renovação do Conselho de Alimentação Escolar (CAE), órgão responsável pelo controle social do PNAE.",
-    date: "02 de junho de 2021",
-    link: "https://drive.google.com/file/d/1VP1TP-FsAP6Pub9mx3kKVbB1659Bh6pH/view?usp=sharing",
-  },
-  {
-    title: "Informe Recursos PNAE 005",
-    description:
-      "A edição nº 5 do Informe Recursos PNAE, o Informe tratará sobre as orientações para que as Entidades Executoras regularizem sua situação para restabelecer o repasse dos recursos financeiros federais do PNAE nos casos citados.",
-    date: "02 de junho de 2021",
-    link: "https://drive.google.com/file/d/1-hQDSmu6nPuK9iuLwc3zkxtZa64lQlYZ/view?usp=sharinghttps://drive.google.com/file/d/1odElm08TOOpO6Ine5NNAppTUOzwmfBPQ/view?usp=sharing",
-  },
-  {
-    title: "Informe Recursos PNAE 004",
-    description:
-      "Entidades Executoras (EExs) inadimplentes com a prestação de contas possam regularizar sua situação e reestabelecer o repasse dos recursos federais do programa.",
-    date: "02 de julho de 2021",
-    link: "https://drive.google.com/file/d/1wjpNDoMQhFAnaKaIDhxG8Kpz16QyxYVv/view?usp=sharing",
-  },
-  {
-    title: "Informe Recursos PNAE 002",
-    description:
-      "Entidades Executoras (EExs) inadimplentes com a prestação de contas possam regularizar sua situação e reestabelecer o repasse dos recursos federais do programa.",
-    date: "08 de abril de 2021",
-    link: "https://drive.google.com/file/d/1l65MnIfouJxPzHtDOyRAdj2yS7puj1-D/view?usp=sharing",
-  },
-  {
-    title: "Informe Recursos PNAE 001",
-    description:
-      "O Informe Recursos PNAE 001, um instrumento por meio do qual o Fundo Nacional de Desenvolvimento da Educação (FNDE) informará tudo sobre o repasse dos recursos financeiros federais do Programa Nacional de Alimentação Escolar (PNAE).",
-    date: "19 de março de 2021",
-    link: "https://drive.google.com/file/d/1LikpIE8w2RvyOTWMZ9hLWYYsTs8Ptht-/view?usp=sharing",
-  },
-];
+import informesRecursos from "../../../data/informes_recursos.json";
+
 export default function informeRecursosPnae() {
   return (
     <>
@@ -84,7 +14,7 @@ export default function informeRecursosPnae() {
         <h2>Recursos PNAE</h2>
         {informesRecursos.map((i) => (
           <Informes
-            key={i.title}
+            key={i.link}
             title={i.title}
             date={i.date}
             description={i.description}

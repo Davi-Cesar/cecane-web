@@ -11,21 +11,21 @@ const productions = [
     title: "Capítulo de livro publicado pelo CECANE/UFRN",
     description:
       "Atividades de Educação Alimentar e Nutricional no âmbito do Programa nacional de Alimentação Escolar (PNAE) no Rio Grande do Norte",
-    link: "",
+    link: "https://drive.google.com/file/d/1RBalw7ze1C2822sg8Ev6ZbnJ0IDAYvwU/view?usp=sharing",
   },
   {
     img: "/images/Produções/Produção-02.png",
     title: "Artigo publicado em revista científica",
     description:
       "Alimentação escolar em tempos de COVID-19: o papel do centro colaborador em alimentação e nutrição no estado do Rio Grande do Norte.",
-    link: "",
+    link: "https://drive.google.com/file/d/1xPwBXZ4bgw3P6LtJ4of0FR6nUp-vMBWm/view?usp=sharing",
   },
   {
     img: "/images/Produções/Produção-03.png",
     title: "Capítulo de livro publicado pelo CECANE/UFRN",
     description:
       "Desafios para equilibrar demanda e oferta de alimentos: análise da execução do PNAE em uma região semiárida do Brasil",
-    link: "",
+    link: "https://revistas.ufpr.br/made/article/view/73174",
   },
 ];
 

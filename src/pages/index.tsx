@@ -1,6 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-/* eslint-disable @next/next/link-passhref */
-/* eslint-disable @next/next/no-html-link-for-pages */
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -9,70 +6,12 @@ import GoogleMaps from "../components/Maps";
 import styles from "./home.module.scss";
 import { CarouselContainer } from "../components/CarouselContainer";
 import { news } from "./Noticias/noticias";
-import { informesNutri } from "./Informes/InformaNutri/informaNutri";
-import { informesCae } from "./Informes/InformeCae/informeCae";
+
+import informe from "../services/Informe";
+import informesNutri from "../data/informes_nutri.json";
+import informesCae from "../data/informes_cae.json";
+import informesRecursos from "../data/informes_recursos.json";
 import { GetStaticProps } from "next";
-import { informesRecursos } from "./Informes/InformeRecursosPnae/informeRecursosPnae";
-
-const moths = [
-  {
-    moth: "janeiro",
-    key: "0",
-  },
-  {
-    moth: "fevereiro",
-    key: "1",
-  },
-  {
-    moth: "março",
-    key: "2",
-  },
-  {
-    moth: "abril",
-    key: "3",
-  },
-  {
-    moth: "maio",
-    key: "4",
-  },
-  {
-    moth: "junho",
-    key: "5",
-  },
-  {
-    moth: "julho",
-    key: "6",
-  },
-  {
-    moth: "agosto",
-    key: "7",
-  },
-  {
-    moth: "setembro",
-    key: "8",
-  },
-  {
-    moth: "outubro",
-    key: "9",
-  },
-  {
-    moth: "novembro",
-    key: "10",
-  },
-  {
-    moth: "dezembro",
-    key: "11",
-  },
-];
-
-type Informe = {
-  description: string;
-  date: string;
-};
-
-interface InformesProps {
-  informes: Informe[];
-}
 
 export default function Home() {
   const nutri = informesNutri[0].date;
@@ -82,38 +21,17 @@ export default function Home() {
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
 
-  const infNutri = nutri.split(" ");
-  const infCae = cae.split(" ");
-  const infRecursos = recursos.split(" ");
-
-  const dataAtual = new Date();
-  let dateCae: Date, dateNutri: Date, dateRecursos: Date;
-
-  for (let i = 0; i < moths.length; i++) {
-    if (infNutri[2] === moths[i].moth) {
-      dateNutri = new Date(+infNutri[4], +moths[i].key, +infNutri[0]); // ano mes dia
-    }
-    if (infCae[2] === moths[i].moth) {
-      dateCae = new Date(+infCae[4], +moths[i].key, +infCae[0]);
-    }
-    if (infRecursos[2] === moths[i].moth) {
-      dateRecursos = new Date(+infRecursos[4], +moths[i].key, +infRecursos[0]);
-    }
-  }
   useEffect(() => {
     //Calculando o ultimo informe lançado pela data obitida
-    if (
-      dataAtual.getTime() >= dateNutri.getTime() &&
-      dateNutri.getTime() >= dateCae.getTime() &&
-      dateNutri.getTime() >= dateRecursos.getTime()
-    ) {
+    const informeDate = informe.getLatestDate({
+      dateCae: cae,
+      dateNutri: nutri,
+      dateRecursos: recursos,
+    });
+    if (informeDate === nutri) {
       setDate(informesNutri[0].date);
       setDescription(informesNutri[0].description);
-    } else if (
-      dataAtual.getTime() >= dateCae.getTime() &&
-      dateCae.getTime() >= dateNutri.getTime() &&
-      dateCae.getTime() >= dateRecursos.getTime()
-    ) {
+    } else if (informeDate === cae) {
       setDate(informesCae[0].date);
       setDescription(informesCae[0].description);
     } else {
@@ -124,7 +42,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Centro Colaborador em Alimentação e Nutrição Escolar </title>
+        <title>Centro Colaborador em Alimentação e Nutrição Escolar</title>
       </Head>
 
       <main className={styles.contentContainer}>
