@@ -5,31 +5,31 @@ import styles from "./styles.module.scss";
 
 const gallery = [
   {
-    img: "/images/IMG_1.jpg",
+    img: "/images/Carrossel/IMG_1.jpg",
     title: "Oficina sobre IQ COSAN (2018)",
   },
   {
-    img: "/images/IMG_2.jpg",
+    img: "/images/Carrossel/IMG_2.jpg",
     title: "Capacitação IQ COSAN (2019)",
   },
   {
-    img: "/images/IMG_3.jpg",
+    img: "/images/Carrossel/IMG_3.jpg",
     title: "Congresso Brasileiro de Nutrição (2018)",
   },
   {
-    img: "/images/IMG_4.jpg",
+    img: "/images/Carrossel/IMG_4.jpg",
     title: "Oficina sobre IQ COSAN (2018)",
   },
   {
-    img: "/images/IMG_5.jpeg",
+    img: "/images/Carrossel/IMG_5.jpeg",
     title: "Evento para compras públicas (2019)",
   },
   {
-    img: "/images/IMG_6.jpg",
+    img: "/images/Carrossel/IMG_6.jpg",
     title: "Oficina sobre IQ COSAN (2018)",
   },
   {
-    img: "/images/IMG_7.jpg",
+    img: "/images/Carrossel/IMG_7.jpg",
     title: "Evento para compras públicas (2019)",
   },
 ];
@@ -38,7 +38,9 @@ export default function Galeria() {
   return (
     <>
       <Head>
-        <title>Galeria</title>
+        <title>
+          Galeria | Centro Colaborador em Alimentação e Nutrição Escolar
+        </title>
       </Head>
       <div className={styles.Container}>
         <h2>Galeria</h2>

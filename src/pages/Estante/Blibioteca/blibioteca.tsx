@@ -17,21 +17,24 @@ export default function Blibioteca() {
   return (
     <>
       <Head>
-        <title>Blibioteca</title>
+        <title>
+          Blibioteca | Centro Colaborador em Alimentação e Nutrição Escolar
+        </title>
       </Head>
       <div className={styles.Container}>
         <h2>Blibioteca</h2>
         <h3>Materiais utilizados e recomendados pelo CECANE/UFRN</h3>
         <div className={styles.search}>
+          <img src="/images/search.svg" alt="Buscar" />
           <input
+            className={styles.inputSearch}
             type="text"
-            placeholder="Buscar..."
+            placeholder="Buscar Material"
             onChange={(event) => setSearch(event.target.value)}
           />
-          <img src="/images/search.svg" alt="Buscar" />
         </div>
         <div className={styles.Content}>
-          {(search == "" &&
+          {(search === "" &&
             shelfs.map((s) => (
               <Shelf key={s.title} title={s.title} img={s.img} link={s.link} />
             ))) ||

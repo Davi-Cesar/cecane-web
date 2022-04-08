@@ -2,16 +2,11 @@
 import Head from "next/head";
 import Modal from "react-modal";
 import emailjs from "emailjs-com";
+
 import React, { useRef } from "react";
 import { FormEvent, useState } from "react";
 
 import styles from "./styles.module.scss";
-interface EmailProps {
-  name: string;
-  yourEmail: string;
-  message: string;
-  email: string;
-}
 
 export default function Contato() {
   const [isOpenModal, setIsOpenModal] = useState(false);
@@ -27,17 +22,17 @@ export default function Contato() {
   function handleCloseModal() {
     setIsOpenModal(false);
   }
-  const form = useRef();
 
+  const form = useRef();
   const sendEmail = (e: { preventDefault: () => void }) => {
-    e.preventDefault();
+    //e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_lz982cp",
+        "service_ik5wt6u",
         "template_m52vk8n",
         form.current,
-        "user_0lWXyf5ra38buj6nQi7Kk"
+        "user_kCYUAoXJVfGGPnIJNr6NG"
       )
       .then(
         (result) => {
@@ -50,14 +45,14 @@ export default function Contato() {
   };
 
   const sendEmailAssessoria = (e: { preventDefault: () => void }) => {
-    e.preventDefault();
+    //e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_xqzy85q",
+        "service_ygbkvo4",
         "template_wkxddxd",
         form.current,
-        "user_0lWXyf5ra38buj6nQi7Kk"
+        "user_kCYUAoXJVfGGPnIJNr6NG"
       )
       .then(
         (result) => {
@@ -72,7 +67,9 @@ export default function Contato() {
   return (
     <>
       <Head>
-        <title>Contato</title>
+        <title>
+          Contato | Centro Colaborador em Alimentação e Nutrição Escolar
+        </title>
       </Head>
       <div className={styles.Container}>
         <h2>Contato</h2>
@@ -90,7 +87,7 @@ export default function Contato() {
               rel="noreferrer"
             >
               <div className={styles.efeito}>
-                <img src="/images/instagram4.png" alt="instagram" />
+                <img src="/images/instagram.png" alt="instagram" />
                 <p>@cecaneufrn</p>
               </div>
             </a>
@@ -118,7 +115,7 @@ export default function Contato() {
             </button>
             <div className={styles.headModal}>
               <h2>Envie E-mail para a CECANE/UFRN</h2>
-              <img src="/images/logo.svg" alt="Cecane" />
+              <img src="/images/favicon.svg" alt="Cecane" />
             </div>
             <form
               ref={form}

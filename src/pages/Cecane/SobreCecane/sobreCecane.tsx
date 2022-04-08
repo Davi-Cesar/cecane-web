@@ -6,7 +6,9 @@ export default function sobreCecane() {
   return (
     <>
       <Head>
-        <title>Sobre Cecane</title>
+        <title>
+          Sobre Cecane | Centro Colaborador em Alimentação e Nutrição Escolar
+        </title>
       </Head>
       <div className={styles.Container}>
         <h2>Sobre Cecane</h2>

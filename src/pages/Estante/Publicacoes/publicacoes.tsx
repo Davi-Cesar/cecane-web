@@ -1,6 +1,3 @@
-/* eslint-disable @next/next/no-document-import-in-page */
-/* eslint-disable @next/next/no-title-in-document-head */
-
 import Head from "next/head";
 import { Productions } from "../../../components/Productions";
 import styles from "./styles.module.scss";
@@ -34,7 +31,9 @@ export default function Publicacoes() {
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>
+          {title} | Centro Colaborador em Alimentação e Nutrição Escolar
+        </title>
       </Head>
       <div className={styles.Container}>
         <h2>{title}</h2>

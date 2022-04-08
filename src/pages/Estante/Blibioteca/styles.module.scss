@@ -7,14 +7,15 @@
   align-items: center;
   justify-content: center;
   .search {
-    background: rgb(228, 228, 228);
+    //background: rgb(228, 228, 228);
+    border: solid 1px var(--gray-300);
     display: flex;
     align-items: center;
     justify-content: flex-end;
     text-align: center;
     padding: 1rem;
     height: 40px;
-    width: 255px;
+    width: 20rem;
     border-radius: 40px;
     margin: 2rem;
 
@@ -26,17 +27,24 @@
       float: right;
       display: flex;
     }
-
-    input {
+    img {
+      margin-right: 1rem;
+    }
+    .inputSearch {
       border: none;
-      background: none;
+      background: transparent;
       outline: none;
+      width: 100%;
+
       float: left;
       padding: 0;
       color: var(--gray-750);
       font-size: 16px;
       transition: 0.4s;
       line-height: 40px;
+    }
+    &:focus-within {
+      box-shadow: 0 0 0.4rem var(--gray-300);
     }
   }
 
@@ -55,5 +63,14 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .Container {
+    h3 {
+      align-items: center;
+      text-align: center;
+    }
   }
 }

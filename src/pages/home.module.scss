@@ -89,6 +89,7 @@
         align-items: center;
 
         a {
+          overflow-wrap: break-word;
           width: 70%;
         }
         button {
@@ -210,6 +211,7 @@
       }
       .informe {
         height: 20rem;
+
         .custonInforme {
           a {
             padding: 1rem 0;
@@ -218,6 +220,12 @@
             text-align: left;
             height: 3rem;
           }
+        }
+      }
+      .mapaColaborativo {
+        .overlay {
+          height: 50%;
+          background: cover;
         }
       }
     }

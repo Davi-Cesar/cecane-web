@@ -1,10 +1,25 @@
-import { GetServerSideProps } from "next";
 import Head from "next/head";
 import React, { useState } from "react";
 import { News } from "../../components/News";
 import styles from "./styles.module.scss";
 
 export const news = [
+  {
+    title: "Planejamento das Compras Públicas do PNAE",
+    description:
+      "Olá, pessoal! É com grande alegria que hoje estamos divulgando a nossa Formação para Atores Sociais envolvidos no Planejamento das Compras Públicas do PNAE! Esta ação nasceu da necessidade de capacitação dos envolvidos no planejamento das compras dos gêneros alimentícios adquiridos com recursos do Programa! Para participar da formação, você poderá optar por uma das 2 turmas disponíveis. Abaixo segue os dias de cada uma delas: ",
+    date: "09 de março de 2022",
+    paragraph:
+      "1ª Turma: 16/03 – 13hs até 17hs 17/03 – 8hs ate 12hs e 13hs até 17hs 18/03 – 8hs as 12hs ",
+    paragraphTwo:
+      "2ª Turma: 21/03 – 13hs até 17hs 22/03 – 8hs até 12hs e 13hs até 17hs 23/03 – 8hs as 12hs ",
+    paragraphTree:
+      "Os encontros serão conduzidos pelas nossas agentes Gerlane Bezerra e Joana Barbosa e para você se inscrever basta clicar em um dos links abaixo:",
+    textLinkSecundario: "1ª Turma:",
+    linkSecundario: "https://forms.gle/a8xxrH5BgnmRFcMAA",
+    textLinkSecundaryTwo: "2ª Turma:",
+    linkSecundaryTwo: "https://forms.gle/QnejZDqTXwZCTGtD6",
+  },
   {
     title: "O CECANE/UFRN lançou novo edital",
     description:
@@ -58,76 +73,32 @@ export const news = [
     link: "https://www.fnde.gov.br/index.php/acesso-a-informacao/institucional/legislacao/item/13923-resolu%C3%A7%C3%A3o-n%C2%B0-20,-de-02-de-dezembro-de-2020#:~:text=Altera%20a%20Resolu%C3%A7%C3%A3o%2FCD%2FFNDE,Nacional%20de%20Alimenta%C3%A7%C3%A3o%20Escolar%20%E2%80%93%20PNAE.",
   },
 ];
-export default function Noticias(props: string) {
-  // function firstElement(props: {
-  //   news: React.SetStateAction<
-  //     | {
-  //         title: string;
-  //         description: string;
-  //         date: string;
-  //         link: string;
-  //         textLink?: undefined;
-  //         textLinkSecundario?: undefined;
-  //         linkSecundario?: undefined;
-  //         textLinkTerciary?: undefined;
-  //         linkTerciary?: undefined;
-  //       }
-  //     | {
-  //         title: string;
-  //         description: string;
-  //         date: string;
-  //         textLink: string;
-  //         link: string;
-  //         textLinkSecundario: string;
-  //         linkSecundario: string;
-  //         textLinkTerciary?: undefined;
-  //         linkTerciary?: undefined;
-  //       }
-  //     | {
-  //         title: string;
-  //         description: string;
-  //         date: string;
-  //         textLink: string;
-  //         link: string;
-  //         textLinkSecundario?: undefined;
-  //         linkSecundario?: undefined;
-  //         textLinkTerciary?: undefined;
-  //         linkTerciary?: undefined;
-  //       }
-  //     | {
-  //         title: string;
-  //         description: string;
-  //         date: string;
-  //         textLink: string;
-  //         link: string;
-  //         textLinkTerciary: string;
-  //         linkTerciary: string;
-  //         textLinkSecundario?: undefined;
-  //         linkSecundario?: undefined;
-  //       }
-  //   >[];
-  // }) {
-  //   setElement(props.news[0]);
-  //   console.log(element);
-  // }
+export default function Noticias() {
   return (
     <>
       <Head>
-        <title>Notícias</title>
+        <title>
+          Notícias | Centro Colaborador em Alimentação e Nutrição Escolar
+        </title>
       </Head>
       <div className={styles.Container}>
         <h2>Notícias</h2>
-        {news.map((n) => (
+        {news.map((n, key) => (
           <News
-            key={n.link}
+            key={key}
             title={n.title}
             date={n.date}
             description={n.description}
+            paragraph={n.paragraph}
+            paragraphTwo={n.paragraphTwo}
+            paragraphTree={n.paragraphTree}
             textLink={n.textLink}
             textLinkSecundary={n.textLinkSecundario}
+            textLinkSecundaryTwo={n.textLinkSecundaryTwo}
             textLinkTerciary={n.textLinkTerciary}
             link={n.link}
             linkSecundary={n.linkSecundario}
+            linkSecundaryTwo={n.linkSecundaryTwo}
             linkTerciary={n.linkTerciary}
           />
         ))}
@@ -135,11 +106,3 @@ export default function Noticias(props: string) {
     </>
   );
 }
-
-// export const getServerSideProps: GetServerSideProps = async () => {
-//   return {
-//     props: {
-//       noticias: news[0],
-//     },
-//   };
-// };

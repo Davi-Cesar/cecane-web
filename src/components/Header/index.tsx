@@ -5,7 +5,7 @@ import styles from "./styles.module.scss";
 import { ActiveLink } from "../ActiveLink";
 
 export function Header() {
-  const [openMenu, setOpenMenu] = useState(true);
+  const [openMenu, setOpenMenu] = useState(false);
   const { asPath } = useRouter();
   function toggleOpenMenu() {
     setOpenMenu(!openMenu);
@@ -15,7 +15,7 @@ export function Header() {
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
         <div className={styles.logoContainer}>
-          <img src="/images/logo.svg" alt="Logo Cecane" />
+          <img src="/images/favicon.svg" alt="Logo Cecane" />
           <h3 className={styles.titleContent}>
             Centro Colaborador em Alimentação e Nutrição Escolar - Universidade
             Federal do Rio Grande do Norte
@@ -38,10 +38,10 @@ export function Header() {
           }
         >
           <ActiveLink activeClassName={styles.active} href="/">
-            <a>Início</a>
+            <a onClick={() => toggleOpenMenu()}>Início</a>
           </ActiveLink>
           <ActiveLink activeClassName={styles.active} href="/Noticias/noticias">
-            <a>Notícias</a>
+            <a onClick={() => toggleOpenMenu()}>Notícias</a>
           </ActiveLink>
 
           <a
@@ -63,7 +63,7 @@ export function Header() {
             >
               <path d="M1.41 0L6 4.58L10.59 0L12 1.41L6 7.41L0 1.41L1.41 0Z" />
             </svg>
-            <ul>
+            <ul onClick={() => toggleOpenMenu()}>
               <Link href="/Informes/InformaNutri/informaNutri" passHref>
                 <li>InformaNutri</li>
               </Link>
@@ -71,10 +71,10 @@ export function Header() {
                 href="/Informes/InformeRecursosPnae/informeRecursosPnae"
                 passHref
               >
-                <li>Informe Recursos PNAE</li>
+                <li onClick={() => toggleOpenMenu()}>Informe Recursos PNAE</li>
               </Link>
               <Link href="/Informes/InformeCae/informeCae" passHref>
-                <li>Informe CAE</li>
+                <li onClick={() => toggleOpenMenu()}>Informe CAE</li>
               </Link>
             </ul>
           </a>
@@ -99,15 +99,15 @@ export function Header() {
             </svg>
             <ul>
               <Link href="/Cecane/Equipe/equipe" passHref>
-                <li>Equipe</li>
+                <li onClick={() => toggleOpenMenu()}>Equipe</li>
               </Link>
               <Link href="/Cecane/SobreCecane/sobreCecane" passHref>
-                <li>Sobre o Cecane</li>
+                <li onClick={() => toggleOpenMenu()}>Sobre o Cecane</li>
               </Link>
             </ul>
           </a>
           <ActiveLink activeClassName={styles.active} href="/Produtos/produtos">
-            <a>Produtos</a>
+            <a onClick={() => toggleOpenMenu()}>Produtos</a>
           </ActiveLink>
           <a
             className={
@@ -129,24 +129,24 @@ export function Header() {
             </svg>
             <ul>
               <Link href="/Estante/Blibioteca/blibioteca" passHref>
-                <li>Blibioteca</li>
+                <li onClick={() => toggleOpenMenu()}>Blibioteca</li>
               </Link>
               <Link href="/Estante/Publicacoes/publicacoes" passHref>
-                <li>Publicacôes/ produções</li>
+                <li onClick={() => toggleOpenMenu()}>Publicacôes/ produções</li>
               </Link>
             </ul>
           </a>
           <ActiveLink activeClassName={styles.active} href="/Galeria/galeria">
-            <a>Galeria</a>
+            <a onClick={() => toggleOpenMenu()}>Galeria</a>
           </ActiveLink>
           <ActiveLink
             activeClassName={styles.active}
             href="/Mapeamento/mapeamento"
           >
-            <a>Mapeamento</a>
+            <a onClick={() => toggleOpenMenu()}>Mapeamento</a>
           </ActiveLink>
           <ActiveLink activeClassName={styles.active} href="/Contato/contato">
-            <a>Contato</a>
+            <a onClick={() => toggleOpenMenu()}>Contato</a>
           </ActiveLink>
         </nav>
       </div>

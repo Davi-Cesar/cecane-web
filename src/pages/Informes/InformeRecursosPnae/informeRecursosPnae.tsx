@@ -8,7 +8,9 @@ export default function informeRecursosPnae() {
   return (
     <>
       <Head>
-        <title>Recursos PNAE</title>
+        <title>
+          Recursos PNAE | Centro Colaborador em Alimentação e Nutrição Escolar
+        </title>
       </Head>
       <div className={styles.Container}>
         <h2>Recursos PNAE</h2>

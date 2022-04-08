@@ -29,7 +29,7 @@
     // }
 
     button {
-      background: var(--white);
+      background: transparent;
       border: none;
       color: var(--green-600);
       padding: 0.8rem;
@@ -39,6 +39,7 @@
       text-decoration: none;
       text-align: center;
       font-size: 0.9rem;
+
       text-transform: uppercase;
 
       cursor: pointer;

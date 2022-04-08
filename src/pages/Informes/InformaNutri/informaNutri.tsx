@@ -8,7 +8,9 @@ export default function informaNutri() {
   return (
     <>
       <Head>
-        <title>InformaNutri</title>
+        <title>
+          InformaNutri | Centro Colaborador em Alimentação e Nutrição Escolar
+        </title>
       </Head>
       <div className={styles.Container}>
         <h2>InformaNutri</h2>
