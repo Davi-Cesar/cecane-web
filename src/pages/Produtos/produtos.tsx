@@ -47,6 +47,15 @@ export default function Produtos() {
             execução do Programa Nacional de Alimentação Escolar e mobilizar
             para a renovação dos membros desse conselho.
           </p>
+          <h4>Produto 5:</h4>
+          <p>
+            O produto é reponsável pela Formação para Atores Sociais envolvidos no planejamento das Compras Públicas
+            do PNAE visa contribuir com os contemplando os aspectos fundamentais e operacionais desta política pública.
+            Portanto, a proposta de execução desta ação torna-se primordial, de forma que os gestores no âmbito municipal
+            e todos os atores envolvidos tenham acesso às informações sobre o PNAE sob a forma de orientações específicas
+            no processo de planejamento de compras, possibilitando a aquisição de gêneros alimentícios adequados e saudáveis
+            para suprir as necessidades nutricionais dos escolares. 
+          </p>
         </div>
       </div>
     </>
