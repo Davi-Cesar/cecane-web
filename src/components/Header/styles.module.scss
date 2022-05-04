@@ -317,6 +317,7 @@
         color: var(--gray-750);
         list-style: none;
         text-decoration: none;
+        margin-top: 1rem;
         &:hover {
           background: var(--gray-200);
         }
@@ -366,6 +367,7 @@
           list-style: none;
           text-decoration: none;
           display: none;
+           
           &:hover {
             background: var(--gray-200);
           }

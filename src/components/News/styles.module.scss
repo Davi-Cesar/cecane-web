@@ -9,12 +9,11 @@
     border-bottom: 0;
   }
   .title {
-    height: 3rem;
+    height: 4rem;
     width: 100%;
     position: relative;
     display: flex;
-    flex-direction: row;
-
+    //flex-direction: row;
     justify-content: space-between;
 
     p {
@@ -49,3 +48,23 @@
     }
   }
 }
+
+@media (max-width: 720px) { 
+  .title {
+    margin-bottom: .8rem;
+
+  }
+}
+@media (max-width: 600px) { 
+  .title {
+    margin-bottom: .8rem;
+    justify-content: flex-end;
+    flex-direction: column;
+    
+
+    h5 {
+      width: 100%;
+    }
+  }
+}
+

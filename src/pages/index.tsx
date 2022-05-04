@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import GoogleMaps from "../components/Maps";
 
 import styles from "./home.module.scss";
 import { CarouselContainer } from "../components/CarouselContainer";
@@ -11,15 +10,20 @@ import informe from "../services/Informe";
 import informesNutri from "../data/informes_nutri.json";
 import informesCae from "../data/informes_cae.json";
 import informesRecursos from "../data/informes_recursos.json";
+import informesAgriculturaFamiliar from "../data/informe_agricultura_familiar.json"
+
 import { GetStaticProps } from "next";
 
 export default function Home() {
   const nutri = informesNutri[0].date;
   const cae = informesCae[0].date;
   const recursos = informesRecursos[0].date;
+  const agriculturaFamiliar = informesAgriculturaFamiliar[0].date;
+
 
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
+  const [link, setLink] = useState("");
 
   useEffect(() => {
     //Calculando o ultimo informe lançado pela data obitida
@@ -27,18 +31,29 @@ export default function Home() {
       dateCae: cae,
       dateNutri: nutri,
       dateRecursos: recursos,
+      dateAgriculturaFamiliar: agriculturaFamiliar,
     });
+    
     if (informeDate === nutri) {
       setDate(informesNutri[0].date);
       setDescription(informesNutri[0].description);
+      setLink("/Informes/InformaNutri/informaNutri");
     } else if (informeDate === cae) {
       setDate(informesCae[0].date);
       setDescription(informesCae[0].description);
-    } else {
+      setLink("/Informes/InformeCae/informeCae");
+    } else if (informeDate == recursos){
       setDate(informesRecursos[0].date);
       setDescription(informesRecursos[0].description);
+      setLink("/Informes/InformeRecursosPnae/informeRecursosPnae");
+    } else if (informeDate == agriculturaFamiliar){
+      setDate(informesAgriculturaFamiliar[0].date);
+      setDescription(informesAgriculturaFamiliar[0].description);
+      setLink("/Informes/informeAgriculturaFamilia/informeAgriculturaFamilia")
     }
   }, [date, description]);
+
+
   return (
     <>
       <Head>
@@ -63,17 +78,15 @@ export default function Home() {
           </div>
 
           <div className={styles.mapaColaborativo}>
-            <h3>Acesse ao Mapa Colaborativo</h3>
-            <img src="/images/map_2.png" alt="Mapa Colaborativo" />
-            <a
-              href="http://177.20.148.101/views/map"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className={styles.overlay}>
-                <div className={styles.text}>Saiba Mais</div>
-              </div>
-            </a>
+            <h3>Mapa Colaborativo</h3>
+            <div className={styles.containerImg}>
+              <Link
+                href="/Mapeamento/mapeamento"
+                > 
+                <img  className={styles.Image} src="/images/map_2.png" alt="Mapa Colaborativo" />
+              </Link>
+            </div>
+              <p>Acesso ao <a href="/Mapeamento/mapeamento">Mapa Colaborativo.</a></p>
           </div>
           <div className={styles.informe}>
             <div className={styles.title}>
@@ -82,7 +95,7 @@ export default function Home() {
             </div>
             <div className={styles.custonInforme}>
               <a type="text">{description}</a>
-              <Link href="/Informes/InformaNutri/informaNutri">
+              <Link href={link}>
                 <button>SAIBA MAIS</button>
               </Link>
             </div>
@@ -102,8 +115,12 @@ export default function Home() {
             <br />
             <img src="/images/livros.png" alt="livros" />
           </div>
-          <h3>Localização cecane</h3>
-          <GoogleMaps />
+          <div>
+
+            <h3>Localização cecane</h3>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15876.632156328393!2d-35.20384515223012!3d-5.833333014744185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scecane%20ufrn!5e0!3m2!1spt-BR!2sbr!4v1650463848069!5m2!1spt-BR!2sbr" width="100%" height="500" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> 
+          </div>
+           
         </div>
       </main>
     </>

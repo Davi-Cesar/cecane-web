@@ -45,7 +45,22 @@
 
       a {
         text-decoration: underline;
+        
+
+        
       }
+    }
+  }
+}
+@media (max-width: 400) { 
+  .title {
+    
+    margin-bottom: .8rem;
+    justify-content: flex-end;
+    flex-direction: column;
+    
+    h5 {
+      width: 100%;
     }
   }
 }

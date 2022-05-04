@@ -1,6 +1,9 @@
 import Head from "next/head";
-import React from "react";
+import React, { useState } from "react";
+import Modal from "react-modal";
+
 import { Gallery } from "../../components/Gallery";
+
 import styles from "./styles.module.scss";
 
 const gallery = [
@@ -35,6 +38,8 @@ const gallery = [
 ];
 
 export default function Galeria() {
+  const [isOpenModal, setIsOpenModal] = useState(false);
+
   return (
     <>
       <Head>
@@ -50,6 +55,7 @@ export default function Galeria() {
           ))}
         </div>
       </div>
+      
     </>
   );
 }

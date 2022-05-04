@@ -26,3 +26,34 @@
     }
   }
 }
+.galleryModal {
+ 
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+  height: 100%;
+  width: 100%;
+
+  .imgModal {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .down {
+    p {
+      width: 100%;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      position: absolute;
+      top: 98%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: ivory;
+      background-color: rgba(0, 0, 0, 0.63);
+    }
+  }
+}

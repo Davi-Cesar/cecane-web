@@ -18,6 +18,9 @@
       &:nth-child(odd) {
         background: #f8f8f8;
       }
+      &:last-child{
+        background: var(--white);
+      }
     }
 
     h3 {
@@ -118,43 +121,71 @@
       }
     }
 
+
     .mapaColaborativo {
       position: relative;
+      
+      p {
+        padding: 1rem 0;
+        font-size: 1.1rem;
+        margin-bottom: 0;
+        a {
+          font-weight: 700;
+          color: var(--green-600);
+          &:hover {
+            text-decoration: underline;
+            color: var(--green-700);
+          }
+        }
+      }
 
       &:hover .overlay {
         opacity: 1;
       }
-      .overlay {
-        position: absolute;
-        top: 1;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 83%;
-        width: 74.5%;
-        opacity: 0;
-        transition: 0.5s ease;
-        background-color: #f3f3f323;
+    }
+    // .mapaColaborativo {
+    //   .container {
+    //     position: relative;
+    //     width: 50%;
+    //   }
+    
+    //   .image {
+    //     display: block;
+    //     width: 100%;
+    //     height: auto;
+    //   }
+      
+    //   &:hover .overlay {
+    //     opacity: 1;
+    //   }
+      
+    //   .overlay {
+    //     position: absolute;
+    //     top: 0;
+    //     bottom: 0;
+    //     left: 0;
+    //     right: 0;
+    //     height: 100%;
+    //     width: 100%;
+    //     opacity: 0;
+    //     transition: .5s ease;
+    //     background-color: #008CBA;
 
-        border-radius: 1rem;
-        cursor: pointer;
-      }
-      .text {
-        color: rgb(0, 59, 13);
-        font-family: "Roboto", sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
-        text-align: left;
-        cursor: pointer;
-        font-size: 20px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-      }
+    //     .text {
+    //       color: white;
+    //       font-size: 20px;
+    //       position: absolute;
+    //       top: 50%;
+    //       left: 50%;
+    //       -webkit-transform: translate(-50%, -50%);
+    //       -ms-transform: translate(-50%, -50%);
+    //       transform: translate(-50%, -50%);
+    //       text-align: center;
+    //     }
+    //   }
+    // }
 
-      @media (max-width: 720px) {
+    @media (max-width: 720px) {
         .overlay {
           width: 50%;
           height: 75%;
@@ -163,7 +194,7 @@
         .text {
           left: 55%;
         }
-      }
+    }
 
       img {
         margin-top: 2rem;
@@ -182,7 +213,7 @@
       }
     }
   }
-}
+
 
 .carouselContainer {
   margin-top: 1rem;
@@ -192,7 +223,6 @@
 @media (max-width: 720px) {
   .contentContainer {
     //font-size: 85.5%;
-
     padding: 0;
     width: 100%;
     .content {

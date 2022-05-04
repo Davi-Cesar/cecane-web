@@ -8,11 +8,11 @@ export default function Blibioteca() {
   const [search, setSearch] = useState("");
   const [shelfSearch] = useState(shelfs);
 
-  const lowerSearch = search.toLocaleLowerCase();
+  const lowerCaseSearch = search.toLocaleLowerCase();
 
   const selection = shelfSearch.filter((s) =>
-    s.title.toLocaleLowerCase().includes(lowerSearch)
-  );
+    s.title.toLocaleLowerCase().includes(lowerCaseSearch) 
+  ); // se o elemento esta dentro lowerCaseSearch ele coloca no shelfSearch
 
   return (
     <>
@@ -45,7 +45,8 @@ export default function Blibioteca() {
                 img={s2.img}
                 link={s2.link}
               />
-            ))}
+            )) 
+          }
         </div>
       </div>
     </>

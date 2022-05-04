@@ -2,6 +2,7 @@ interface InformesDates {
     dateNutri: string,
     dateCae: string,
     dateRecursos: string,
+    dateAgriculturaFamiliar: string,
 }
 
 class Informe {
@@ -60,12 +61,12 @@ class Informe {
 
     }
     
-    getLatestDate({dateNutri, dateCae, dateRecursos}: InformesDates) {
+    getLatestDate({dateNutri, dateCae, dateRecursos, dateAgriculturaFamiliar}: InformesDates) {
         const infNutri = dateNutri.split(" ");
         const infCae = dateCae.split(" ");
         const infRecursos = dateRecursos.split(" ");
-
-        let dateCaeFormat: Date, dateNutriFormat: Date, dateRecursosFormat: Date;
+        const infAgriculturaFamiliar = dateAgriculturaFamiliar.split(" ");
+        let dateCaeFormat: Date, dateNutriFormat: Date, dateRecursosFormat: Date, dateAgriculturaFamiliarFormat: Date;
 
         for (let i = 0; i < this.moths.length; i++) {
             
@@ -78,17 +79,24 @@ class Informe {
             if (infRecursos[2] === this.moths[i].moth) {
                 dateRecursosFormat = new Date(+infRecursos[4], +this.moths[i].key, +infRecursos[0]);
             }
-            
+            if (infAgriculturaFamiliar[2] === this.moths[i].moth) {
+              dateAgriculturaFamiliarFormat = new Date(+infAgriculturaFamiliar[4], +this.moths[i].key, +infAgriculturaFamiliar[0]);
+          }
         }
-        const dateArray = [dateCaeFormat, dateNutriFormat, dateRecursosFormat];
-        const latestDate = dateArray.sort().slice(-1)[0];
+        const dateArray = [dateCaeFormat, dateNutriFormat, dateAgriculturaFamiliarFormat, dateRecursosFormat];
+        const latestDate = dateArray.sort().slice(-3)[0]; 
+        
         if(latestDate === dateCaeFormat) {
             return dateCae;
         } else if(latestDate === dateNutriFormat) {
             return dateNutri;
-        } else {
+        } else if(latestDate === dateRecursosFormat){
             return dateRecursos;
+        } else if(latestDate === dateAgriculturaFamiliarFormat){
+            return dateAgriculturaFamiliar; 
+        } else {
+            return new Date();
         }
     }
-}
+  }
 export default new Informe();

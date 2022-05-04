@@ -3,6 +3,7 @@ import { Header } from "../components/Header";
 import React from "react";
 
 import "../styles/global.scss";
+import { Menu } from "../components/Menu";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

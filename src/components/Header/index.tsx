@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { ActiveLink } from "../ActiveLink";
 
+
+
 export function Header() {
   const [openMenu, setOpenMenu] = useState(false);
   const { asPath } = useRouter();
@@ -64,6 +66,9 @@ export function Header() {
               <path d="M1.41 0L6 4.58L10.59 0L12 1.41L6 7.41L0 1.41L1.41 0Z" />
             </svg>
             <ul onClick={() => toggleOpenMenu()}>
+              <Link href="/Informes/InformeAgriculturaFamilia/InformeAgriculturaFamilia" passHref>
+                <li>Informe Agricultura Familiar e PNAE</li>
+              </Link>
               <Link href="/Informes/InformaNutri/informaNutri" passHref>
                 <li>InformaNutri</li>
               </Link>
@@ -132,7 +137,7 @@ export function Header() {
                 <li onClick={() => toggleOpenMenu()}>Blibioteca</li>
               </Link>
               <Link href="/Estante/Publicacoes/publicacoes" passHref>
-                <li onClick={() => toggleOpenMenu()}>Publicacôes/ produções</li>
+                <li onClick={() => toggleOpenMenu()}>Publicacões/ produções</li>
               </Link>
             </ul>
           </a>
