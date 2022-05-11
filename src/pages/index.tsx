@@ -49,7 +49,7 @@ export default function Home() {
     } else if (informeDate == agriculturaFamiliar){
       setDate(informesAgriculturaFamiliar[0].date);
       setDescription(informesAgriculturaFamiliar[0].description);
-      setLink("/Informes/informeAgriculturaFamilia/informeAgriculturaFamilia")
+      setLink("/Informes/InformeAgriculturaFamilia/InformeAgriculturaFamilia")
     }
   }, [date, description]);
 
