@@ -32,14 +32,17 @@ export function Gallery({ img, title }: GalleryPros) {
       className={styles.reactModalContent}
       overlayClassName={styles.reactModaOverlay}
       style={
-        { content: {
+        { 
+        content: {
           overflow: 'hidden',
           top: '40px',
-          left: '150px',
-          right: '150px',
+          left: '15px',
+          right: '15px',
           bottom: '40px',
           borderRadius: '0px',  
-          padding: '0'
+          padding: '0',
+          margin: '0',
+          background: '#fff'
         } }
       }
       

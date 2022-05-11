@@ -90,7 +90,7 @@ export default function Home() {
           </div>
           <div className={styles.informe}>
             <div className={styles.title}>
-              <h3>Ultimo informe lançado</h3>
+              <h3>Último informe lançado</h3>
               <p>{date}</p>
             </div>
             <div className={styles.custonInforme}>

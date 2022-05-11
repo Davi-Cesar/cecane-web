@@ -50,7 +50,8 @@ export function Header() {
             className={
               asPath === "/Informes/InformaNutri/informaNutri" ||
               asPath === "/Informes/InformeRecursosPnae/informeRecursosPnae" ||
-              asPath === "/Informes/InformeCae/informeCae"
+              asPath === "/Informes/InformeCae/informeCae" ||
+              asPath === "/Informes/InformeAgriculturaFamilia/InformeAgriculturaFamilia"
                 ? styles.active
                 : ""
             }
@@ -67,10 +68,10 @@ export function Header() {
             </svg>
             <ul onClick={() => toggleOpenMenu()}>
               <Link href="/Informes/InformeAgriculturaFamilia/InformeAgriculturaFamilia" passHref>
-                <li>Informe Agricultura Familiar e PNAE</li>
+                <li onClick={() => toggleOpenMenu()}>Informe Agricultura Familiar e PNAE</li>
               </Link>
               <Link href="/Informes/InformaNutri/informaNutri" passHref>
-                <li>InformaNutri</li>
+                <li onClick={() => toggleOpenMenu()}>InformaNutri</li>
               </Link>
               <Link
                 href="/Informes/InformeRecursosPnae/informeRecursosPnae"
