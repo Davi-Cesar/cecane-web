@@ -49,28 +49,16 @@ export default function Mapeamento() {
             e município, localização no mapa. Para acessar clique em Mapa
             Colaborativo, abaixo temos um representação do mapa.
           </p>
-          <div className={styles.Map}>
-            <ReactMapGL
-              mapStyle="mapbox://styles/kayton/ckxqr1vo31seb15o53w5d9dcn"
-              mapboxApiAccessToken={
-                "pk.eyJ1Ijoia2F5dG9uIiwiYSI6ImNreHJwN2s1NjBvOG4ybm55YzBvM2diOHUifQ.-prXtlZtKjgDVbH3PiAlhA"
-              }
-              {...viewport}
-              onViewportChange={(
-                newView: React.SetStateAction<{
-                  latitude: number;
-                  longitude: number;
-                  zoom: number;
-                  width: string;
-                  height: string;
-                  zindex: number;
-                }>
-              ) => setViewport(newView)}
-            >
-              <h3>Mapa Ilustrativo</h3>
-              {markers}
-            </ReactMapGL>
+          <div className={styles.MapaColaborativo}>
+            <iframe
+              width="560"
+              height="315"
+              src="http://177.20.148.101/views/map"
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
           </div>
+
           <p>
             Tenha acesso ao{" "}
             <a

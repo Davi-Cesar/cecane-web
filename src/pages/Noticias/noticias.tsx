@@ -5,6 +5,17 @@ import styles from "./styles.module.scss";
 
 export const news = [
   {
+    title: "Encontro de Formação CAE",
+    description:
+      "Passando para informar que nos dias 23 e 24 desse mês nossa equipe do CECANE UFRN estará realizando o 1º Encontro de Formação para Conselheiros(as) da Alimentação Escolar deste ano! O Encontro será ONLINE e você já pode se inscrever. Confira abaixo as informações:  ",
+    date: "05 de maio de 2022",
+    paragraph:
+      "As inscrições são gratuitas, limitadas e acontecerão por meio do nosso e-mail (cecaneufrn@gmail.com). Assim, basta você enviar para nosso endereço as seguintes informações: nome completo, CPF e o município do CAE onde atua. Nosso público-alvo são os(as) conselheiros(as) que atuam em Entidades Executoras no estado do Rio Grande do Norte (conselheiros(as) de outros estados entrarão na fila de espera).",
+
+    textLink: "Card da Programação",
+    link: "https://drive.google.com/file/d/1MqCjfzcGjRNovhLCs3csQZFFAtxccfck/view?usp=sharing",
+  },
+  {
     title: "Planejamento das Compras Públicas do PNAE",
     description:
       "Olá, pessoal! É com grande alegria que hoje estamos divulgando a nossa Formação para Atores Sociais envolvidos no Planejamento das Compras Públicas do PNAE! Esta ação nasceu da necessidade de capacitação dos envolvidos no planejamento das compras dos gêneros alimentícios adquiridos com recursos do Programa! Para participar da formação, você poderá optar por uma das 2 turmas disponíveis. Abaixo segue os dias de cada uma delas: ",

@@ -4,8 +4,6 @@ import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { ActiveLink } from "../ActiveLink";
 
-
-
 export function Header() {
   const [openMenu, setOpenMenu] = useState(false);
   const { asPath } = useRouter();
@@ -50,7 +48,9 @@ export function Header() {
             className={
               asPath === "/Informes/InformaNutri/informaNutri" ||
               asPath === "/Informes/InformeRecursosPnae/informeRecursosPnae" ||
-              asPath === "/Informes/InformeCae/informeCae"
+              asPath === "/Informes/InformeCae/informeCae" ||
+              asPath ===
+                "/Informes/InformeAgriculturaFamilia/InformeAgriculturaFamilia"
                 ? styles.active
                 : ""
             }
@@ -66,11 +66,16 @@ export function Header() {
               <path d="M1.41 0L6 4.58L10.59 0L12 1.41L6 7.41L0 1.41L1.41 0Z" />
             </svg>
             <ul onClick={() => toggleOpenMenu()}>
-              <Link href="/Informes/InformeAgriculturaFamilia/InformeAgriculturaFamilia" passHref>
-                <li>Informe Agricultura Familiar e PNAE</li>
+              <Link
+                href="/Informes/InformeAgriculturaFamilia/InformeAgriculturaFamilia"
+                passHref
+              >
+                <li onClick={() => toggleOpenMenu()}>
+                  Informe Agricultura Familiar e PNAE
+                </li>
               </Link>
               <Link href="/Informes/InformaNutri/informaNutri" passHref>
-                <li>InformaNutri</li>
+                <li onClick={() => toggleOpenMenu()}>InformaNutri</li>
               </Link>
               <Link
                 href="/Informes/InformeRecursosPnae/informeRecursosPnae"
