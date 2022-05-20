@@ -49,8 +49,12 @@ export function Header() {
               asPath === "/Informes/InformaNutri/informaNutri" ||
               asPath === "/Informes/InformeRecursosPnae/informeRecursosPnae" ||
               asPath === "/Informes/InformeCae/informeCae" ||
+<<<<<<< HEAD
               asPath ===
                 "/Informes/InformeAgriculturaFamilia/InformeAgriculturaFamilia"
+=======
+              asPath === "/Informes/InformeAgriculturaFamilia/InformeAgriculturaFamilia"
+>>>>>>> c936422e37ce750a1db3bbe98bda1460963a370e
                 ? styles.active
                 : ""
             }
@@ -66,6 +70,7 @@ export function Header() {
               <path d="M1.41 0L6 4.58L10.59 0L12 1.41L6 7.41L0 1.41L1.41 0Z" />
             </svg>
             <ul onClick={() => toggleOpenMenu()}>
+<<<<<<< HEAD
               <Link
                 href="/Informes/InformeAgriculturaFamilia/InformeAgriculturaFamilia"
                 passHref
@@ -73,6 +78,10 @@ export function Header() {
                 <li onClick={() => toggleOpenMenu()}>
                   Informe Agricultura Familiar e PNAE
                 </li>
+=======
+              <Link href="/Informes/InformeAgriculturaFamilia/InformeAgriculturaFamilia" passHref>
+                <li onClick={() => toggleOpenMenu()}>Informe Agricultura Familiar e PNAE</li>
+>>>>>>> c936422e37ce750a1db3bbe98bda1460963a370e
               </Link>
               <Link href="/Informes/InformaNutri/informaNutri" passHref>
                 <li onClick={() => toggleOpenMenu()}>InformaNutri</li>
