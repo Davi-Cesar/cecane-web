@@ -25,7 +25,7 @@ export function Gallery({ img, title }: GalleryPros) {
           <p>{title}</p>
         </div>
       </div>
-<<<<<<< HEAD
+
       <Modal
         isOpen={isOpenModal}
         onRequestClose={handleCloseModal}
@@ -48,30 +48,6 @@ export function Gallery({ img, title }: GalleryPros) {
             background: "#fff",
           },
         }}
-=======
-    </div>
-    <Modal
-      isOpen={isOpenModal}
-      onRequestClose={handleCloseModal}
-      ariaHideApp={false}
-      className={styles.reactModalContent}
-      overlayClassName={styles.reactModaOverlay}
-      style={
-        { 
-        content: {
-          overflow: 'hidden',
-          top: '40px',
-          left: '15px',
-          right: '15px',
-          bottom: '40px',
-          borderRadius: '0px',  
-          padding: '0',
-          margin: '0',
-          background: '#fff'
-        } }
-      }
-      
->>>>>>> c936422e37ce750a1db3bbe98bda1460963a370e
       >
         <div className={styles.galleryModal}>
           <img

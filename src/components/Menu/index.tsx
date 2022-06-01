@@ -5,8 +5,6 @@ import styles from "./styles.module.scss";
 import { ActiveLink } from "../ActiveLink";
 import { menu as elementsMenu } from "./menu";
 
-
-
 export function Menu() {
   const [openMenu, setOpenMenu] = useState(false);
   const { asPath } = useRouter();
@@ -14,42 +12,67 @@ export function Menu() {
     setOpenMenu(!openMenu);
   }
 
-  const menu = elementsMenu.filter(child => child.parent === null);
-  const sheets = elementsMenu.filter(sheet => sheet.parent != null);
+  const menu = elementsMenu.filter((child) => child.parent === null);
+  const sheets = elementsMenu.filter((sheet) => sheet.parent != null);
 
   return (
     <header className={styles.headerContainer}>
-      <div className={styles.headerContent}>
-        <div className={styles.logoContainer}>
-          <img src="/images/favicon.svg" alt="Logo Cecane" />
-          <h3 className={styles.titleContent}>
-            Centro Colaborador em Alimentação e Nutrição Escolar - Universidade
-            Federal do Rio Grande do Norte
-          </h3>
-        </div>
-
-        <div
-          onClick={() => toggleOpenMenu()}
-          className={
-            openMenu === true ? styles.mobileMenuOpen : styles.mobileMenu
-          }
-        >
-          <div className={styles.line1}></div>
-          <div className={styles.line2}></div>
-          <div className={styles.line3}></div>
-        </div>
-        <nav
-          className={
-            openMenu === false ? styles.navContainerClose : styles.navContainer
-          }
-        >   
-            {menu.map((i) => (
-                <ActiveLink activeClassName={styles.active} href={i.link} key={i.id}>
-                    <a onClick={() => toggleOpenMenu()}>{i.name}</a>
-                </ActiveLink>
-            ))}
-        </nav>
-      </div>
+      <ul className="nav nav-tabs">
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#">
+            Active
+          </a>
+        </li>
+        <li className="nav-item dropdown">
+          <a
+            className="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            href="#"
+            role="button"
+            aria-expanded="false"
+          >
+            Dropdown
+          </a>
+          <ul className="dropdown-menu">
+            <li>
+              <a className="dropdown-item" href="#">
+                Action
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Another action
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Something else here
+              </a>
+            </li>
+            <li className="dropdown-divider"></li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Separated link
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#">
+            Link
+          </a>
+        </li>
+        <li className="nav-item">
+          <a
+            className="nav-link disabled"
+            href="#"
+            tabIndex={-1}
+            aria-disabled="true"
+          >
+            Disabled
+          </a>
+        </li>
+      </ul>
     </header>
   );
 }

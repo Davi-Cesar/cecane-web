@@ -11,11 +11,9 @@
   "dependencies": {
     "emailjs": "^3.7.0",
     "emailjs-com": "^3.2.0",
-    "google-map-react": "^2.1.10",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-map-gl": "^6.1.18",
     "react-modal": "^3.14.4",
     "react-responsive-carousel": "^3.2.21",
     "sass": "^1.43.2"
