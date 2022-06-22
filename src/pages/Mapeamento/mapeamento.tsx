@@ -1,32 +1,8 @@
 import Head from "next/head";
 import styles from "./styles.module.scss";
-import ReactMapGL, { Marker } from "react-map-gl";
 import React from "react";
-import Image from "next/image";
-import data from "../../data/location_map.json";
-import "mapbox-gl/dist/mapbox-gl.css";
 
 export default function Mapeamento() {
-  const [viewport, setViewport] = React.useState({
-    latitude: -5.45,
-    longitude: -36.3,
-    zoom: 7.3,
-    width: "100%",
-    height: "30rem",
-    zindex: 1,
-  });
-
-  const markers = data.map((data) => (
-    <Marker key={data.name} longitude={data.longitude} latitude={data.latitude}>
-      <Image
-        src="/images/marker_mapBox.svg"
-        alt={data.name}
-        height="32%"
-        width="32%"
-        className={styles.Image}
-      />
-    </Marker>
-  ));
   return (
     <>
       <Head>
