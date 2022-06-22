@@ -102,7 +102,7 @@
     }
 
     .title {
-      height: 3rem;
+      height: 4rem;
       width: 100%;
       position: relative;
       display: flex;
@@ -202,11 +202,6 @@
         display: block;
         height: auto;
 
-        // &:hover {
-        //     transition: .8s;
-        //     opacity: 85%;
-        //     filter: grayscale(30%);
-        // }
         @media (max-width: 720px) {
           width: 50%;
         }
@@ -218,6 +213,14 @@
 .carouselContainer {
   margin-top: 1rem;
   border-radius: 5rem;
+}
+
+@media (min-width: 1920px) {
+  .contentContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
 }
 
 @media (max-width: 720px) {
