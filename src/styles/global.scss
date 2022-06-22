@@ -4,6 +4,7 @@
   padding: 0;
 }
 
+
 :root {
   --white: #ffffff;
 
@@ -27,8 +28,13 @@
     font-size: 89.5%;
   }
 }
-
+@media (min-width: 1920px) { 
+  html {
+    font-size: 100%;
+  }
+}
 @media (max-width: 1080px) {
+  
   html {
     font-size: 95.75%;
   }
