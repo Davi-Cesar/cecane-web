@@ -5,6 +5,7 @@
     border-radius: 0.5rem;
     height: 450px;
     width: 735px;
+    object-fit: cover;
     margin: 0 auto;
   }
 }
@@ -12,6 +13,7 @@
 .Carousel {
   border-radius: 5rem;
 }
+
 
 @media (max-width: 720px) {
   .carouselContainer {

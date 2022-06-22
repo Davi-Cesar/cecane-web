@@ -3,6 +3,19 @@
   margin: 0 auto;
   padding: 0 2rem;
   width: 100%;
+
+  // > div {
+  //   padding: 2rem auto;
+
+  // }
+  > div {
+    padding: 2rem;
+    
+    &:nth-child(odd) {
+      background: #f8f8f8;
+    }
+    
+  }
   h2 {
     margin-top: 1rem;
   }
