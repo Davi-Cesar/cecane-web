@@ -131,6 +131,15 @@ export default function Equipe() {
             }
             link={"http://lattes.cnpq.br/0736180735922247"}
           />
+          <Profile
+            img={"/images/Equipe/Clara.jpeg"}
+            name={"Clara Pitanga"}
+            title={"Contadora"}
+            description={
+              "Bacharel em Ciências Contábeis, possui experiência na área contábil e tributária de empresas comerciais, associações e cooperativas. Atua como agente do PNAE colaborando no Produto 2, que trata do Monitoramento e Assessoria às Entidades Executoras do  RN."
+            }
+            link={"http://lattes.cnpq.br/0736180735922247"}
+          />
         </div>
       </div>
     </>
