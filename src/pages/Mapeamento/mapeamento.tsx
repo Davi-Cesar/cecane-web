@@ -29,7 +29,7 @@ export default function Mapeamento() {
             <iframe
               width="560"
               height="315"
-              src="http://177.20.148.101/views/map"
+              src="http://mapacecane.ccs.ufrn.br/views/map"
               frameBorder="0"
               allowFullScreen
             ></iframe>
@@ -39,7 +39,7 @@ export default function Mapeamento() {
             Tenha acesso ao{" "}
             <a
               type="link"
-              href="http://177.20.148.101/views/map"
+              href="http://mapacecane.ccs.ufrn.br/views/map"
               target="_blank"
               rel="noreferrer"
             >

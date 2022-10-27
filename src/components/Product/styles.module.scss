@@ -1,0 +1,21 @@
+.Content {     
+    .containerProduct{
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        
+        h4, h2  {
+            margin-top: 1rem;
+            font-weight: 700;
+        }
+        
+        p {
+            
+            font-size: 1.3rem;
+            font-weight: 400;
+            text-align: justify;
+        }
+    }
+}

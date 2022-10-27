@@ -30,17 +30,17 @@ export function Nav({ onChange, openMenu }: Props) {
       <ActiveLink activeClassName={styles.active} href="/">
         <a onClick={() => onChange()}>Início</a>
       </ActiveLink>
-      <ActiveLink activeClassName={styles.active} href="/Noticias/noticias">
+      <ActiveLink activeClassName={styles.active} href="/Noticias/noticias/">
         <a onClick={() => onChange()}>Notícias</a>
       </ActiveLink>
 
       <a
         className={
-          asPath === "/Informes/InformaNutri/informaNutri" ||
-          asPath === "/Informes/InformeRecursosPnae/informeRecursosPnae" ||
-          asPath === "/Informes/InformeCae/informeCae" ||
+          asPath === "/Informes/InformaNutri/informaNutri/" ||
+          asPath === "/Informes/InformeRecursosPnae/informeRecursosPnae/" ||
+          asPath === "/Informes/InformeCae/informeCae/" ||
           asPath ===
-            "/Informes/InformeAgriculturaFamilia/InformeAgriculturaFamilia"
+            "/Informes/InformeAgriculturaFamilia/InformeAgriculturaFamilia/"
             ? styles.active
             : ""
         }
@@ -58,23 +58,23 @@ export function Nav({ onChange, openMenu }: Props) {
         </svg>
         <ul className={subMenu === false ? styles.subMenu : styles.subMenuOpen}>
           <Link
-            href="/Informes/InformeAgriculturaFamilia/InformeAgriculturaFamilia"
+            href="/Informes/InformeAgriculturaFamilia/InformeAgriculturaFamilia/"
             passHref
           >
             <li onClick={() => onChange()}>
               Informe Agricultura Familiar e PNAE
             </li>
           </Link>
-          <Link href="/Informes/InformaNutri/informaNutri" passHref>
+          <Link href="/Informes/InformaNutri/informaNutri/" passHref>
             <li onClick={() => onChange()}>InformaNutri</li>
           </Link>
           <Link
-            href="/Informes/InformeRecursosPnae/informeRecursosPnae"
+            href="/Informes/InformeRecursosPnae/informeRecursosPnae/"
             passHref
           >
             <li onClick={() => onChange()}>Informe Recursos PNAE</li>
           </Link>
-          <Link href="/Informes/InformeCae/informeCae" passHref>
+          <Link href="/Informes/InformeCae/informeCae/" passHref>
             <li onClick={() => onChange()}>Informe CAE</li>
           </Link>
           <li onClick={() => togleSubMenu()}>Voltar</li>
@@ -83,8 +83,8 @@ export function Nav({ onChange, openMenu }: Props) {
 
       <a
         className={
-          asPath === "/Cecane/Equipe/equipe" ||
-          asPath === "/Cecane/SobreCecane/sobreCecane"
+          asPath === "/Cecane/Equipe/equipe/" ||
+          asPath === "/Cecane/SobreCecane/sobreCecane/"
             ? styles.active
             : ""
         }
@@ -105,22 +105,22 @@ export function Nav({ onChange, openMenu }: Props) {
             subMenu === false ? styles.subMenu : styles.subMenuOpenCecane
           }
         >
-          <Link href="/Cecane/Equipe/equipe" passHref>
+          <Link href="/Cecane/Equipe/equipe/" passHref>
             <li onClick={() => onChange()}>Equipe</li>
           </Link>
-          <Link href="/Cecane/SobreCecane/sobreCecane" passHref>
+          <Link href="/Cecane/SobreCecane/sobreCecane/" passHref>
             <li onClick={() => onChange()}>Sobre o Cecane</li>
           </Link>
           <li onClick={() => togleSubMenu()}>Voltar</li>
         </ul>
       </a>
-      <ActiveLink activeClassName={styles.active} href="/Produtos/produtos">
+      <ActiveLink activeClassName={styles.active} href="/Produtos/produtos/">
         <a onClick={() => onChange()}>Produtos</a>
       </ActiveLink>
       <a
         className={
-          asPath === "/Estante/Blibioteca/blibioteca" ||
-          asPath === "/Estante/Publicacoes/publicacoes"
+          asPath === "/Estante/Blibioteca/blibioteca/" ||
+          asPath === "/Estante/Publicacoes/publicacoes/"
             ? styles.active
             : ""
         }
@@ -141,22 +141,25 @@ export function Nav({ onChange, openMenu }: Props) {
             subMenu === false ? styles.subMenu : styles.subMenuOpenEstante
           }
         >
-          <Link href="/Estante/Blibioteca/blibioteca" passHref>
+          <Link href="/Estante/Blibioteca/blibioteca/" passHref>
             <li onClick={() => onChange()}>Blibioteca</li>
           </Link>
-          <Link href="/Estante/Publicacoes/publicacoes" passHref>
+          <Link href="/Estante/Publicacoes/publicacoes/" passHref>
             <li onClick={() => onChange()}>Publicacões/ produções</li>
           </Link>
           <li onClick={() => togleSubMenu()}>Voltar</li>
         </ul>
       </a>
-      <ActiveLink activeClassName={styles.active} href="/Galeria/galeria">
+      <ActiveLink activeClassName={styles.active} href="/Galeria/galeria/">
         <a onClick={() => onChange()}>Galeria</a>
       </ActiveLink>
-      <ActiveLink activeClassName={styles.active} href="/Mapeamento/mapeamento">
+      <ActiveLink
+        activeClassName={styles.active}
+        href="/Mapeamento/mapeamento/"
+      >
         <a onClick={() => onChange()}>Mapeamento</a>
       </ActiveLink>
-      <ActiveLink activeClassName={styles.active} href="/Contato/contato">
+      <ActiveLink activeClassName={styles.active} href="/Contato/contato/">
         <a onClick={() => onChange()}>Contato</a>
       </ActiveLink>
     </nav>

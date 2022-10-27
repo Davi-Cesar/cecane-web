@@ -2,10 +2,11 @@
   "name": "site-cecane",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://cecane.ccs.ufrn.br/",
+  "extends": "next/core-web-vitals",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
@@ -23,7 +24,7 @@
     "@types/node": "^16.11.1",
     "@types/react": "^17.0.38",
     "@types/react-modal": "^3.13.1",
-    "eslint": "8.0.1",
+    "eslint": "^8.21.0",
     "eslint-config-next": "11.1.2",
     "modal": "^1.2.0",
     "react-bootstrap": "^2.0.0",
