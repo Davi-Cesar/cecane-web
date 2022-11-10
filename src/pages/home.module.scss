@@ -71,39 +71,7 @@
         width: 300px;
       }
 
-      .custonShelf {
-        height: 4rem;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        a {
-          width: 70%;
-          padding: auto;
-        }
-        button {
-          margin: 1 auto;
-        }
-      }
-    }
-
-    .informe {
-      overflow: hidden;
-      .custonInforme {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
-        a {
-          overflow-wrap: break-word;
-          width: 70%;
-        }
-        button {
-          margin: 1 auto;
-        }
-      }
+     
     }
 
     .title {

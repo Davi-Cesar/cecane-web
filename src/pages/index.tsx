@@ -13,6 +13,7 @@ import informesRecursos from "../data/informes_recursos.json";
 import informesAgriculturaFamiliar from "../data/informe_agricultura_familiar.json";
 
 import { GetStaticProps } from "next";
+import { Box } from "../components/Box";
 
 export default function Home() {
   const nutri = informesNutri[0].date;
@@ -62,18 +63,12 @@ export default function Home() {
         <CarouselContainer />
 
         <div className={styles.content}>
-          <div className={styles.informe}>
-            <div className={styles.title}>
-              <h3>Notícias</h3>
-              <p>{news[0].date}</p>
-            </div>
-            <div className={styles.custonInforme}>
-              <a type="text">{news[0].description}</a>
-              <Link href="/Noticias/noticias">
-                <button>SAIBA MAIS</button>
-              </Link>
-            </div>
-          </div>
+          <Box
+            title="Notícias"
+            date={news[0].date}
+            description={news[0].description}
+            link="/Noticias/noticias"
+          />
 
           <div className={styles.mapaColaborativo}>
             <h3>Mapa Colaborativo</h3>
@@ -90,33 +85,25 @@ export default function Home() {
               Acesso ao <a href="/Mapeamento/mapeamento">Mapa Colaborativo.</a>
             </p>
           </div>
-          <div className={styles.informe}>
-            <div className={styles.title}>
-              <h3>Último informe lançado</h3>
-              <p>{date}</p>
-            </div>
-            <div className={styles.custonInforme}>
-              <a type="text">{description}</a>
-              <Link href={link}>
-                <button>SAIBA MAIS</button>
-              </Link>
-            </div>
-          </div>
+
+          <Box
+            title="Último informe lançado"
+            date={date}
+            description={description}
+            link="link"
+          />
 
           <div className={styles.contentShelf}>
-            <h3>Estante</h3>
-            <div className={styles.custonShelf}>
-              <a type="text">
-                Acesse os materiais recomendados e utilizados pelo nosso
-                serviço, assim como as nossas publicações científicas!
-              </a>
-              <Link href="/Estante/Blibioteca/blibioteca">
-                <button>SAIBA MAIS</button>
-              </Link>
-            </div>
+            <Box
+              title="Estante"
+              description="Acesse os materiais recomendados e utilizados pelo nosso
+                serviço, assim como as nossas publicações científicas!"
+              link="/Estante/Blibioteca/blibioteca"
+            />
             <br />
             <img src="/images/livros.png" alt="livros" />
           </div>
+
           <div>
             <h3>Localização cecane</h3>
             <iframe
