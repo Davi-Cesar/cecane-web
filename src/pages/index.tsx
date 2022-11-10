@@ -90,7 +90,7 @@ export default function Home() {
             title="Último informe lançado"
             date={date}
             description={description}
-            link="link"
+            link={link}
           />
 
           <div className={styles.contentShelf}>
