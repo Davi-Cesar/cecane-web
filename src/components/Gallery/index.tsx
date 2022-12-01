@@ -25,6 +25,7 @@ export function Gallery({ img, title }: GalleryPros) {
           <p>{title}</p>
         </div>
       </div>
+
       <Modal
         isOpen={isOpenModal}
         onRequestClose={handleCloseModal}

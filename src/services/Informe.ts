@@ -84,7 +84,7 @@ class Informe {
           }
         }
         const dateArray = [dateCaeFormat, dateNutriFormat, dateAgriculturaFamiliarFormat, dateRecursosFormat];
-        const latestDate = dateArray.sort().slice(-3)[0]; 
+        const latestDate = dateArray.sort().slice(-4)[0]; // Retorna a data mais recente
         
         if(latestDate === dateCaeFormat) {
             return dateCae;

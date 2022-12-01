@@ -26,7 +26,7 @@
     h3 {
       font-weight: 700;
       font-size: 1.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
 
     p {
@@ -61,48 +61,21 @@
       overflow: hidden;
       position: relative;
 
+      h2 {
+        margin-bottom: 2rem;
+        background-color: red;
+      }
+
       img {
         height: 235px;
         width: 300px;
       }
 
-      .custonShelf {
-        height: 4rem;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        a {
-          width: 70%;
-          padding: auto;
-        }
-        button {
-          margin: 1 auto;
-        }
-      }
-    }
-
-    .informe {
-      overflow: hidden;
-      .custonInforme {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
-        a {
-          overflow-wrap: break-word;
-          width: 70%;
-        }
-        button {
-          margin: 1 auto;
-        }
-      }
+     
     }
 
     .title {
-      height: 3rem;
+      height: 4rem;
       width: 100%;
       position: relative;
       display: flex;
@@ -202,11 +175,6 @@
         display: block;
         height: auto;
 
-        // &:hover {
-        //     transition: .8s;
-        //     opacity: 85%;
-        //     filter: grayscale(30%);
-        // }
         @media (max-width: 720px) {
           width: 50%;
         }
@@ -218,6 +186,14 @@
 .carouselContainer {
   margin-top: 1rem;
   border-radius: 5rem;
+}
+
+@media (min-width: 1920px) {
+  .contentContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
 }
 
 @media (max-width: 720px) {
@@ -234,6 +210,7 @@
         font-size: 0.8rem;
       }
       .contentShelf {
+        
         img {
           width: 60%;
           height: 60%;
