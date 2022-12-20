@@ -1,4 +1,5 @@
 import styles from "./styles.module.scss";
+import Image from "next/image";
 
 interface ProfilePros {
   img: string;
@@ -8,10 +9,27 @@ interface ProfilePros {
   link: string;
 }
 
+const myLoader = ({ src, width, quality }) => {
+  return `${src}?w=${width}&q=${quality || 100}`;
+};
+// http://localhost:3000/Cecane/Equipe/equipe/
 export function Profile({ img, name, title, description, link }: ProfilePros) {
   return (
     <div className={styles.Profile}>
-      <img src={img} alt={name} />
+      <div
+        className="flex h-[18px] w-[18px]"
+        style={{
+          position: "relative",
+        }}
+      >
+        <Image
+          height="150"
+          width="150"
+          src={img}
+          loader={myLoader}
+          alt="image"
+        />
+      </div>
       <h4>{name}</h4>
       <a type="text" className={styles.Title}>
         {title}
