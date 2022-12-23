@@ -5,6 +5,14 @@ import styles from "./styles.module.scss";
 
 export const news = [
   {
+    title: "Recesso CECANE/UFRN",
+    description:
+      "Informamos que o CECANE/UFRN estará em recesso do dia 23 a 30/12/22. Retomaremos o funcionamento do nosso serviço dia 02/01/2023. Desejamos um ótimo Natal e final de ano para todos e até breve!",
+    date: "23 de dezembro de 2022",
+    textLink: "",
+    link: "",
+  },
+  {
     title: "Encontro de Formação CAE",
     description:
       "Passando para informar que nos dias 23 e 24 desse mês nossa equipe do CECANE UFRN estará realizando o 1º Encontro de Formação para Conselheiros(as) da Alimentação Escolar deste ano! O Encontro será ONLINE e você já pode se inscrever. Confira abaixo as informações:  ",
