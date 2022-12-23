@@ -16,16 +16,19 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
+  // img {
+  //   margin-top: 10px;
+   
+  //   border-radius: 50%;
+  //   margin: 0 auto;
+  //   display: block;
+    
+  // }
   img {
-    margin-top: 10px;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-    object-fit: cover;
+    border-radius: 50%; /* arredonda a imagem */
+    overflow: hidden; /* esconde qualquer parte da imagem que ultrapassar os limites da borda arredondada */
+    object-fit: cover; /* redimensiona a imagem de forma que ela cubra toda a área do elemento */
   }
-
   h4 {
     font-family: "Roboto", sans-serif;
     font-weight: 700;

@@ -64,6 +64,10 @@ export default function Contato() {
       );
   };
 
+  function rgba(arg0: number, arg1: number, arg2: number, arg3: number) {
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <>
       <Head>
@@ -166,6 +170,8 @@ export default function Contato() {
                   assessoriacecaneufrn@gmail.com
                 </option>
               </select>
+
+              <script async src="//www.instagram.com/embed.js"></script>
               <button type="submit">Enviar E-mail</button>
             </form>
           </Modal>
