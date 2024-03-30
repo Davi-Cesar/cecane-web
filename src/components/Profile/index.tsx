@@ -22,13 +22,7 @@ export function Profile({ img, name, title, description, link }: ProfilePros) {
           position: "relative",
         }}
       >
-        <Image
-          height="150"
-          width="150"
-          src={img}
-          loader={myLoader}
-          alt="image"
-        />
+        <img src={img} alt={name} />
       </div>
       <h4>{name}</h4>
       <a type="text" className={styles.Title}>

@@ -34,7 +34,7 @@ export function Nav({ onChange, openMenu }: Props) {
         <a onClick={() => onChange()}>Notícias</a>
       </ActiveLink>
 
-      <a
+      <span
         className={
           asPath === "/Informes/InformaNutri/informaNutri/" ||
           asPath === "/Informes/InformeRecursosPnae/informeRecursosPnae/" ||
@@ -46,7 +46,7 @@ export function Nav({ onChange, openMenu }: Props) {
         }
         onClick={() => togleSubMenu()}
       >
-        Infomes
+        Informes
         <svg
           width="10"
           height="7"
@@ -58,6 +58,7 @@ export function Nav({ onChange, openMenu }: Props) {
         </svg>
         <ul className={subMenu === false ? styles.subMenu : styles.subMenuOpen}>
           <Link
+            legacyBehavior
             href="/Informes/InformeAgriculturaFamilia/InformeAgriculturaFamilia/"
             passHref
           >
@@ -65,23 +66,28 @@ export function Nav({ onChange, openMenu }: Props) {
               Informe Agricultura Familiar e PNAE
             </li>
           </Link>
-          <Link href="/Informes/InformaNutri/informaNutri/" passHref>
+          <Link
+            legacyBehavior
+            href="/Informes/InformaNutri/informaNutri/"
+            passHref
+          >
             <li onClick={() => onChange()}>InformaNutri</li>
           </Link>
           <Link
+            legacyBehavior
             href="/Informes/InformeRecursosPnae/informeRecursosPnae/"
             passHref
           >
             <li onClick={() => onChange()}>Informe Recursos PNAE</li>
           </Link>
-          <Link href="/Informes/InformeCae/informeCae/" passHref>
+          <Link legacyBehavior href="/Informes/InformeCae/informeCae/" passHref>
             <li onClick={() => onChange()}>Informe CAE</li>
           </Link>
           <li onClick={() => togleSubMenu()}>Voltar</li>
         </ul>
-      </a>
+      </span>
 
-      <a
+      <span
         className={
           asPath === "/Cecane/Equipe/equipe/" ||
           asPath === "/Cecane/SobreCecane/sobreCecane/"
@@ -105,19 +111,19 @@ export function Nav({ onChange, openMenu }: Props) {
             subMenu === false ? styles.subMenu : styles.subMenuOpenCecane
           }
         >
-          <Link href="/Cecane/Equipe/equipe/" passHref>
+          <Link legacyBehavior href="/Cecane/Equipe/equipe/" passHref>
             <li onClick={() => onChange()}>Equipe</li>
           </Link>
-          <Link href="/Cecane/SobreCecane/sobreCecane/" passHref>
+          <Link legacyBehavior href="/Cecane/SobreCecane/sobreCecane/" passHref>
             <li onClick={() => onChange()}>Sobre o Cecane</li>
           </Link>
           <li onClick={() => togleSubMenu()}>Voltar</li>
         </ul>
-      </a>
+      </span>
       <ActiveLink activeClassName={styles.active} href="/Produtos/produtos/">
         <a onClick={() => onChange()}>Produtos</a>
       </ActiveLink>
-      <a
+      <span
         className={
           asPath === "/Estante/Blibioteca/blibioteca/" ||
           asPath === "/Estante/Publicacoes/publicacoes/"
@@ -126,7 +132,7 @@ export function Nav({ onChange, openMenu }: Props) {
         }
         onClick={() => togleSubMenu()}
       >
-        Estante
+        Publicações
         <svg
           width="10"
           height="7"
@@ -141,15 +147,19 @@ export function Nav({ onChange, openMenu }: Props) {
             subMenu === false ? styles.subMenu : styles.subMenuOpenEstante
           }
         >
-          <Link href="/Estante/Blibioteca/blibioteca/" passHref>
-            <li onClick={() => onChange()}>Blibioteca</li>
+          <Link legacyBehavior href="/Estante/Blibioteca/blibioteca/" passHref>
+            <li onClick={() => onChange()}>Material de apoio</li>
           </Link>
-          <Link href="/Estante/Publicacoes/publicacoes/" passHref>
-            <li onClick={() => onChange()}>Publicacões/ produções</li>
+          <Link
+            legacyBehavior
+            href="/Estante/Publicacoes/publicacoes/"
+            passHref
+          >
+            <li onClick={() => onChange()}>Produções</li>
           </Link>
           <li onClick={() => togleSubMenu()}>Voltar</li>
         </ul>
-      </a>
+      </span>
       <ActiveLink activeClassName={styles.active} href="/Galeria/galeria/">
         <a onClick={() => onChange()}>Galeria</a>
       </ActiveLink>

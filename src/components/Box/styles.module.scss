@@ -2,16 +2,22 @@
     overflow: hidden;
     .custonInforme {
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: left;
+      text-align: justify;
+     
 
       a {
+        text-overflow: ellipsis;
         overflow-wrap: break-word;
-        width: 70%;
+        width: 100%;
       }
       button {
-        margin: 1 auto;
+        
+        position: relative;
+        
+        cursor: pointer;
       }
     }
   }

@@ -26,7 +26,7 @@ export function Gallery({ img, title }: GalleryPros) {
         </div>
       </div>
 
-      <Modal
+      {/* <Modal
         isOpen={isOpenModal}
         onRequestClose={handleCloseModal}
         ariaHideApp={false}
@@ -60,7 +60,7 @@ export function Gallery({ img, title }: GalleryPros) {
             <p>{title}</p>
           </div>
         </div>
-      </Modal>
+      </Modal> */}
     </>
   );
 }

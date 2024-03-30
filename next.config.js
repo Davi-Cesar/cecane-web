@@ -1,7 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   trailingSlash: true,
-  devServer: {
-    historyApiFallback: true,
+  images: {
+    unoptimized: true,
   },
 };

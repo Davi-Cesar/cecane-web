@@ -4,6 +4,21 @@ import styles from "./styles.module.scss";
 
 const productions = [
   {
+    img: "/images/Produções/Construindo caminhos para a educação alimentar e nutricional-Capa.png",
+    title:
+      "Mostra Científica do Congresso Internacional de Alimentação Escolar",
+    description:
+      "Construindo caminhos para a educação alimentar e nutricional, p. 73 - 79.",
+    link: "https://repositorio.ufba.br/bitstream/ri/35674/4/Extens%c3%a3o%20e%20Pesquisa%20em%20Alimenta%c3%a7%c3%a3o-repositorio.pdf",
+  },
+  {
+    img: "/images/Produções/Extensão e Pesquisa em Alimentação-Capa.png",
+    title: "Capítulo de livro publicado pelo CECANE/UFRN",
+    description:
+      "O CECANE/UFRN publica capítulo a partir das vivências no Programa nacional de Alimentação Escolar (PNAE) do Rio Grande do Norte.",
+    link: "https://repositorio.ufba.br/bitstream/ri/35674/4/Extens%c3%a3o%20e%20Pesquisa%20em%20Alimenta%c3%a7%c3%a3o-repositorio.pdf",
+  },
+  {
     img: "/images/Produções/Produção-01.png",
     title: "Capítulo de livro publicado pelo CECANE/UFRN",
     description:
@@ -36,9 +51,11 @@ export default function Publicacoes() {
         </title>
       </Head>
       <div className={styles.Container}>
-        <h2>{title}</h2>
+        <h2>Publicações e Produções</h2>
         <div className={styles.Content}>
-          <p>Tenha acesso Publicações e Produções da CECANE/UFRN, abaixo:</p>
+          <p className={styles.paragraf}>
+            Tenha acesso Publicações e Produções da CECANE/UFRN, abaixo:
+          </p>
 
           {productions.map((p) => (
             <Productions

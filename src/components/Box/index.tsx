@@ -1,7 +1,4 @@
-/* eslint-disable @next/next/link-passhref */
 import Link from "next/link";
-import { useState } from "react";
-import Modal from "react-modal";
 import styles from "./styles.module.scss";
 
 interface BoxPros {
@@ -11,7 +8,7 @@ interface BoxPros {
   link: string;
 }
 
-export function Box({ date, description, title }: BoxPros) {
+export function Box({ date, description, title, link }: BoxPros) {
   return (
     <>
       <div className={styles.informe}>
@@ -21,8 +18,8 @@ export function Box({ date, description, title }: BoxPros) {
         </div>
         <div className={styles.custonInforme}>
           <a type="text">{description}</a>
-          <Link href="/Noticias/noticias">
-            <button>SAIBA MAIS</button>
+          <Link legacyBehavior href={link} passHref>
+            <button>Saiba mais {">"} </button>
           </Link>
         </div>
       </div>

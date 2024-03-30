@@ -25,6 +25,8 @@
     
   // }
   img {
+    height: 150px;
+    width: 150px;
     border-radius: 50%; /* arredonda a imagem */
     overflow: hidden; /* esconde qualquer parte da imagem que ultrapassar os limites da borda arredondada */
     object-fit: cover; /* redimensiona a imagem de forma que ela cubra toda a área do elemento */

@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 
 import styles from "./home.module.scss";
-import { CarouselContainer } from "../components/CarouselContainer";
+import "swiper/css";
 import { news } from "./Noticias/noticias";
 
 import informe from "../services/Informe";
@@ -12,8 +12,8 @@ import informesCae from "../data/informes_cae.json";
 import informesRecursos from "../data/informes_recursos.json";
 import informesAgriculturaFamiliar from "../data/informe_agricultura_familiar.json";
 
-import { GetStaticProps } from "next";
 import { Box } from "../components/Box";
+import { SwiperComponent } from "../components/Swiper";
 
 export default function Home() {
   const nutri = informesNutri[0].date;
@@ -60,20 +60,20 @@ export default function Home() {
       </Head>
 
       <main className={styles.contentContainer}>
-        <CarouselContainer />
+        {/* <SwiperComponent></SwiperComponent> */}
 
         <div className={styles.content}>
           <Box
             title="Notícias"
             date={news[0].date}
             description={news[0].description}
-            link="/Noticias/noticias"
+            link="/Noticias/noticias/"
           />
 
           <div className={styles.mapaColaborativo}>
             <h3>Mapa Colaborativo</h3>
             <div className={styles.containerImg}>
-              <Link href="/Mapeamento/mapeamento">
+              <Link href="/Mapeamento/mapeamento/">
                 <img
                   className={styles.Image}
                   src="/images/map_2.png"
@@ -82,7 +82,7 @@ export default function Home() {
               </Link>
             </div>
             <p>
-              Acesso ao <a href="/Mapeamento/mapeamento">Mapa Colaborativo.</a>
+              Acesso ao <a href="/Mapeamento/mapeamento/">Mapa Colaborativo.</a>
             </p>
           </div>
 
@@ -95,10 +95,10 @@ export default function Home() {
 
           <div className={styles.contentShelf}>
             <Box
-              title="Estante"
+              title="Material de Apoio"
               description="Acesse os materiais recomendados e utilizados pelo nosso
                 serviço, assim como as nossas publicações científicas!"
-              link="/Estante/Blibioteca/blibioteca"
+              link="/Estante/Blibioteca/blibioteca/"
             />
             <br />
             <img src="/images/livros.png" alt="livros" />
@@ -119,42 +119,3 @@ export default function Home() {
     </>
   );
 }
-
-// export const getStaticProps: GetStaticProps = async () => {
-//   const nutri = informesNutri[0].date;
-//   const cae = informesCae[0].date;
-
-//   const infNutri = nutri.split(" ");
-//   const infCae = cae.split(" ");
-//   const dataAtual = new Date();
-//   let dateCae: Date, dateNutri: Date;
-
-//   moths.map((i) => {
-//     if (infNutri[2] === i.moth) {
-//       dateNutri = new Date(+infNutri[4], +i.key, +infNutri[0]); // ano mes dia
-//     }
-//     if (infCae[2] === i.moth) {
-//       dateCae = new Date(+infCae[4], +i.key, +infCae[0]);
-//     }
-//   });
-//   const informe = () => {
-//     if (
-//       dataAtual.getTime() >= dateNutri.getTime() &&
-//       dateNutri.getTime() >= dateCae.getTime()
-//     ) {
-//       const informe = [
-//         { date: informesNutri[0].date },
-//         { description: informesNutri[0].description },
-//       ];
-//     } else {
-//       const inf = [
-//         { date: informesCae[0].date },
-//         { description: informesCae[0].description },
-//       ];
-//     }
-//   };
-
-//   return {
-//     props: { informe },
-//   };
-// };

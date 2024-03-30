@@ -11,19 +11,20 @@ export default function Blibioteca() {
   const lowerCaseSearch = search.toLocaleLowerCase();
 
   const selection = shelfSearch.filter((s) =>
-    s.title.toLocaleLowerCase().includes(lowerCaseSearch) 
+    s.title.toLocaleLowerCase().includes(lowerCaseSearch)
   ); // se o elemento esta dentro lowerCaseSearch ele coloca no shelfSearch
 
   return (
     <>
       <Head>
         <title>
-          Blibioteca | Centro Colaborador em Alimentação e Nutrição Escolar
+          Material de apoio | Centro Colaborador em Alimentação e Nutrição
+          Escolar
         </title>
       </Head>
       <div className={styles.Container}>
-        <h2>Blibioteca</h2>
-        <h3>Materiais utilizados e recomendados pelo CECANE/UFRN</h3>
+        <h2>Material de apoio</h2>
+        <h3>Material de apoio utilizados e recomendados pelo CECANE/UFRN</h3>
         <div className={styles.search}>
           <img src="/images/search.svg" alt="Buscar" />
           <input
@@ -45,8 +46,7 @@ export default function Blibioteca() {
                 img={s2.img}
                 link={s2.link}
               />
-            )) 
-          }
+            ))}
         </div>
       </div>
     </>

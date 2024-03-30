@@ -30,7 +30,6 @@ export default function Mapeamento() {
               width="560"
               height="315"
               src="http://mapacecane.ccs.ufrn.br/views/map"
-              frameBorder="0"
               allowFullScreen
             ></iframe>
           </div>
@@ -66,7 +65,6 @@ export default function Mapeamento() {
               src="https://player.vimeo.com/video/542736398?h=e2163e8723&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
               width="720"
               height="720"
-              frameBorder="0"
               allow="autoplay; picture-in-picture" // fullscreen;
               allowFullScreen
               title="mapa_colaborativo_cecane_v3"

@@ -103,7 +103,7 @@ export default function Contato() {
             </button>
           </div>
 
-          <Modal
+          {/* <Modal
             isOpen={isOpenModal}
             onRequestClose={handleCloseModal}
             ariaHideApp={false}
@@ -174,7 +174,7 @@ export default function Contato() {
               <script async src="//www.instagram.com/embed.js"></script>
               <button type="submit">Enviar E-mail</button>
             </form>
-          </Modal>
+          </Modal> */}
         </div>
       </div>
     </>

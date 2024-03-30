@@ -1,5 +1,5 @@
 .contentContainer {
-  max-width: 800px;
+  max-width: 1020px;
   margin: 0 auto;
   padding: 0 2rem;
 
@@ -36,22 +36,24 @@
     button {
       background: transparent;
       border: none;
-      color: var(--green-600);
-      padding: 1rem;
+      color: #5c5c5c;
+      position: left;
+      width: 120px;
+      padding: 1rem 1rem 1rem 0rem ;
       font-family: "Roboto", sans-serif;
       text-align: center;
       text-decoration: none;
       display: inline-block;
       font-size: 1rem;
-
+      font-weight: 700;
       cursor: pointer;
-      border: 2px solid var(--green-600);
-      border-radius: 0.5rem;
+      // border: 2px solid var(--green-600);
+      // border-radius: 0.5rem;
       transition: 0.8s;
 
       &:hover {
-        background-color: var(--green-600);
-        color: var(--white);
+        color: var(--green-600);
+       
       }
     }
 
@@ -166,8 +168,8 @@
       margin-top: 0;
 
       button {
-        padding: 0.6rem;
-        font-size: 0.8rem;
+      
+        color: var(--green-600);
       }
       .contentShelf {
         

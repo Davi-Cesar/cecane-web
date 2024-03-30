@@ -1,9 +1,12 @@
 .Productions {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
   width: 100%;
   height: 100%;
   margin-bottom: 1rem;
+
 
   img {
     width: 400px;
@@ -12,16 +15,17 @@
   }
 
   .ProductionsFooter {
+   
     padding: 1rem;
     margin: 0 auto;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
+   
+    
     text-align: left;
     p {
-      font-size: 0.1rem;
+      font-size: 1rem;
       text-align: justify;
     }
     // h5 {
@@ -59,16 +63,22 @@
 
 @media (max-width: 740px) {
   .Productions {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    
     img {
-      width: 250px;
-      height: 250px;
+      width: 20rem;
+      height: 100%;
     }
     .ProductionsFooter {
-      padding: 0rem 0rem 0rem 1rem;
+      padding: 2rem 1rem;
       margin: 0;
       p {
-        font-size: 0.5rem;
+        font-size: 18px;
         text-align: left;
+        padding: 0;
       }
       button {
         width: 60%;

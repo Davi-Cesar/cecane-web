@@ -5,6 +5,16 @@ import styles from "./styles.module.scss";
 
 export const news = [
   {
+    title: "Manual de Cadastro de Nutricionistas",
+    description:
+      "Para acompanhar a execução do Programa Nacional de Alimentação Escolar - PNAE, o Fundo Nacional de Desenvolvimento da Educação - FNDE realiza o cadastramento e o monitoramento dos nutricionistas vinculados às Entidades Executoras (estados, municípios, Distrito Federal e rede federal) que atuam no Programa. Até recentemente esse cadastro acontecia por meio do Sistema Integrado de Monitoramento Execução e Controle, Módulo Plano de Ações Articuladas - SIMEC/PAR, do Ministério da Educação - MEC. ",
+    paragraph:
+      "No entanto, com o objetivo de melhorar os procedimentos de vinculação e desvinculação dos nutricionistas do PNAE, informamos que, desde 1 de junho de 2023, o cadastro de nutricionistas passou a ser realizado no Sistema de Gestão do Pnae – SIGPNAE, em um módulo específico para esse fim.",
+    date: "15 de junho de 2023",
+    textLink: "Manual de Cadastro",
+    link: "https://drive.google.com/file/d/1Pf-g4aYqIVveUfIdjxUPXPCQsFPiZ3WI/view?usp=sharing",
+  },
+  {
     title: "Recesso CECANE/UFRN",
     description:
       "Informamos que o CECANE/UFRN estará em recesso do dia 23 a 30/12/22. Retomaremos o funcionamento do nosso serviço dia 02/01/2023. Desejamos um ótimo Natal e final de ano para todos e até breve!",
